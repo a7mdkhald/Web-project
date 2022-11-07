@@ -1,0 +1,124 @@
+#logo{
+    width: 70px;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 30px;
+    font-family:fantasy;
+    padding-right: 250px;
+    color: darkslategray;
+    margin: 0;
+}
+#nav{
+    size: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: #99bdb2;
+    box-shadow: 0 5px 15px rgba(196, 190, 161, 0.836);
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+#navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content:center;
+    margin: 0;
+}
+#navbar li{
+    padding: 0 20px;
+    position: relative;
+    margin: 0;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    position: absolute;
+    background: #088178;
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+}
+#s2{
+   background-image: url(https://static3.bigstockphoto.com/6/5/2/large1500/256609972.jpg);
+    background-position: top 0 left 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+h2{
+   
+    font-size: 35px;
+    font-family:'Courier New', Courier, monospace;
+    
+    font-style: italic;
+    margin: 0;
+    
+}
+h3{
+  
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+    
+    font-style: italic;
+    
+    margin: 0%;
+    
+}
+h4{
+  
+    font-size: 40px;
+    font-family:'Courier New', Courier, monospace;
+
+    font-style: italic;
+    color: #93c7c3;
+    
+    margin: 0%;
+    
+}
+h5{
+    font-size: 28px;
+    padding-top: 40px;
+    margin: 0;
+    padding-left:  5px;  
+    font-style: italic;
+}
+#d1{
+    padding: 0 80px;
+}
+#b1{
+    border: 0;
+    
+    background-color: rgb(177, 176, 165);
+    font-size: 17px;
+}
+#a1{
+    text-decoration: none;
+    color: #088178;
+    font-weight: 600;
+    
+}
+
