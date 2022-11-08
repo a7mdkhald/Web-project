@@ -1,0 +1,104 @@
+h1{
+    font-size: 30px;
+    font-family:fantasy;
+    padding-right: 80px;
+    color: darkslategray;
+    margin: 0;
+}
+#nav{
+    size: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: #99bdb2;
+    box-shadow: 0 5px 15pxrgba(61, 60, 55, 0.836);
+    position: sticky;
+    top: 0;
+    left: 0;
+    
+}
+#navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content:center;
+    margin: 0;
+}
+#navbar li{
+    padding: 0 20px;
+    position: relative;
+    margin: 0;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    position: absolute;
+    background: #088178;
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+}
+body{
+    background-image: url(https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+h2{
+    font-size: 42px;
+    font-weight: 700;
+    font-family:'Times New Roman', Times, serif;
+}
+h3{
+    font-size: 30px;
+    font-weight: 600;
+    color: #088178;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#s2{
+    text-align: center;
+    padding-top: 100px;
+}
+#l1{
+    font-weight: 700;
+    font-size: 16px;
+}
+#d2{
+    padding-bottom: 50px;
+}
+#i1{
+    margin: 5px;
+}
+#b{
+    /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+    transition-duration: 0.4s;
+    background-color: #77beba;
+    width: 200px;
+    height: 40px;
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border-width: 1px;
+}
+#b:hover{
+     /* Green */
+    color: white;
+}
+#p1{
+    font-weight: 800;
+}
+#a1{
+    font-weight: 600;
+}
