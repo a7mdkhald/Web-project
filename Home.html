@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Story online shop</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script type="text/javascript" src="Home.js"></script>
   </head>
+
+  
   <body>
     <section id="nav">
-    <h1><b>Story-eCommerce</b></h1><br>
+      <img id="img1" src="Title.webp" alt="Story_img">
       <div id="d1">
         <ul id="navbar">
-          <li ><a class="active" href="home.html" >Home</a></li>
-          <li><a href="shop.html" >Shopping</a></li>
-          <li><a href="blog.html" >Blog</a></li>
-          <li><a href="contact.html" >Contact</a></li>
-          <li><a href="about.html" >About</a></li>
-          <li><a href="cart.html">Cart</a></li>
+          <li><input id="bar" type="text" placeholder="search" /> 
+            <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="shop.html">Shopping</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          
           <li><a href="register.html">Register</a></li>
+          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" /></li></a>
+          <li><a href="profile.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
         </ul>
       </div>
     </section>
-    <section id="s2">
-    <div id="d1"> <h5>trade-in-offer</h5>
-      <h3>Super value Deals<br></h3>
-      <h4>On all our Products</h4>
-      <button id="b1"><a id="a1" href="shop.html">shop now!</a></button>
-    </div>
-    </section>
+      <section id="s2">
+        <!-- Slideshow container -->
+        <div id="d2">
+          <h5>trade-in-offer</h5>
+          <h3>Super value Deals<br /></h3>
+          <h4>On all our Products</h4>
+          <button id="b1"><a id="a1" href="shop.html">shop now!</a></button>
+        </div> 
+      <div id="slideshow-container" class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div id="mySlides" class="mySlides">
+          <div class="numbertext">1 / 3</div>
+          <img src="img1.jpg" style="width: 100%" />
+          
+        </div>
+  
+        <div id="mySlides" class="mySlides">
+          <div class="numbertext">2 / 3</div>
+          <img src="img2.webp" style="width: 100%" />
+          
+        </div>
+  
+        <div id="mySlides" class="mySlides">
+          <div class="numbertext">3 / 3</div>
+          <img src="img3.jpg" style="width: 100%" />
+          
+        </div>
+  
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+  
+      <!-- The dots/circles -->
+      <div id="dot" style="text-align: center">
+        <span id="dot1" class="dot" onclick="currentSlide(1)"></span>
+        <span id="dot1" class="dot" onclick="currentSlide(2)"></span>
+        <span id="dot1" class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      </section>
+    
+
+    
   </body>
 </html>
