@@ -57,7 +57,7 @@ h1{
     left: 20px;
 }
 #s2{
-    background-image: url(https://static3.bigstockphoto.com/6/5/2/large1500/256609972.jpg);
+    background-image: url('Home_pic.png');
     background-position: top 0 left 25%;
     background-repeat: no-repeat;
     background-size: cover;
