@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <section id="nav">
+      <img id="img1" src="Title.webp" alt="Story_img">
+      <div id="d1">
+        <ul id="navbar" >
+          <li><input id="bar" type="text" placeholder="search" /> 
+            <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
+          <li><a href="home.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shopping
+<div class="dropdown">
+  <ul>
+    <li><a href="featured.html">featured</a></li>
+    <li><a href="categories.html">categories</a></li>
+  </ul>
+</div></a>
+</li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          
+          
+          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+            <div id="sup-menu">
+              <ul>
+                <li><a id="a2" href="register.html" target="_blank">Sign in</li></a>
+                <li><a id="a2" href="sign-up.html" target="_blank">Sign up</li></a>
+              </ul>
+            </div>
+          </li></a>
+          <li><a href="profile.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
+        </ul>
+      </div>
+    </section>
+<div class ="menu">
+<ul id="menu-list">
+    <li id="list"><button  id="men" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong >men</strong> </button></li>
+    <li  id="list"><button  id="women" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>women</strong></button></li>
+    <li id="list"><button id="kids" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>kids</strong></button></li>
+</ul>
+</div>
+    <div class="items">
+        <ul id="items-list">
+            <li>
+            <div class="item-lis">
+                <a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt="" width="200px" height="200px"></a>
+                <h5 class="item-head">black jacket</h5>
+            </div>
+            </li>
+            <li>
+                <div class="item-lis">
+                    <a href=""><img src="data:image/jpeg;base64,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" alt="" width="200px" height="200px"></a>
+                    <h5 class="item-head">blue jeans</h5>
+                </div>
+            </li>
+            <li>
+                <div class="item-lis">
+                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Exjgy2Zjh5r7CjYsa2c-chmcH43n9RF-MQ&usqp=CAU" alt="" width="200px" height="200px"></a>
+                <h5 class="item-head">checkered shirt</h5>
+                </div>
+            </li>
+            <li><div class="item-lis"></div></li>
+        </ul>
+        
+    </div>
+
+</body>
+</html>
