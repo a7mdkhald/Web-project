@@ -15,7 +15,7 @@
     <section id="nav">
       <img id="img1" src="Title.webp" alt="Story_img">
       <div id="d1">
-        <ul id="navbar">
+        <ul id="navbar" >
           <li><input id="bar" type="text" placeholder="search" /> 
             <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
           <li><a class="active" href="home.html">Home</a></li>
@@ -24,8 +24,15 @@
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
           
-          <li><a href="register.html">Register</a></li>
-          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" /></li></a>
+          
+          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+            <div id="sup-menu">
+              <ul>
+                <li><a id="a2" href="register.html" target="_blank">Sign in</li></a>
+                <li><a id="a2" href="sign-up.html" target="_blank">Sign up</li></a>
+              </ul>
+            </div>
+          </li></a>
           <li><a href="profile.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
         </ul>
       </div>
@@ -41,19 +48,19 @@
       <div id="slideshow-container" class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div id="mySlides" class="mySlides">
-          <div class="numbertext">1 / 3</div>
+          <!-- <div class="numbertext">1 / 3</div> -->
           <img src="img1.jpg" style="width: 100%" />
           
         </div>
   
         <div id="mySlides" class="mySlides">
-          <div class="numbertext">2 / 3</div>
+          <!-- <div class="numbertext">2 / 3</div> -->
           <img src="img2.webp" style="width: 100%" />
           
         </div>
   
         <div id="mySlides" class="mySlides">
-          <div class="numbertext">3 / 3</div>
+          <!-- <div class="numbertext">3 / 3</div> -->
           <img src="img3.jpg" style="width: 100%" />
           
         </div>
@@ -71,7 +78,8 @@
         <span id="dot1" class="dot" onclick="currentSlide(3)"></span>
       </div>
       </section>
-    
+      
+
 
     
   </body>

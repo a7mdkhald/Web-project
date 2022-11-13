@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Story online shop registeration</title>
-    <link rel="stylesheet" href="register.css">
-    </head>
-    <body>
-        <section id="nav">
-          <h1><b>Story-eCommerce</b></h1><br>
-          <div id="d1">
-            <ul id="navbar">
-              <li><a href="home.html">Home</a></li>
-              <li><a href="shop.html">Shopping</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="cart.html">Cart</a></li>
-              <li><a class="active" href="register.html">Register</a></li>
-            </ul>
-          </div>
-        </section>
-        
-        <section id="s2">
-          <div>
-            <h2>Welcome To Story-eCommerce</h2>
-            <h3>Sign-in To Get Amazing Offers!</h3>
-          </div>
-          <div id="d2">
-            <label id="l1" for="email">E-mail &nbsp; &nbsp;</label>
-            <input id="i1" type="email" class="email" placeholder="Email"><br>
-            <label id="l1" for="password">Password&nbsp;</label>
-            <input id="i1" type="password" class="password" placeholder="Password" min="6" max="20"><br>
-            <button  id="b" type="submit" class="button" >Log In Now</button>
-            <p id="p1">Don't Have an Account? <a id="a1" href="sign-up.html" >Sign-up Now!</a> </p>
-          </div>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <section id="nav">
+      <img id="img1" src="Title.webp" alt="Story_img">
+      <div id="d1">
+        <ul id="navbar" >
+          <li><input id="bar" type="text" placeholder="search" /> 
+            <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
+          <li><a class="active" href="home.html">Home</a></li>
+          <li><a href="shop.html">Shopping</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+          
+          
+          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+            <div id="sup-menu">
+              <ul>
+                <li><a id="a2" href="register.html" target="_blank">Sign in</li></a>
+                <li><a id="a2" href="sign-up.html" target="_blank">Sign up</li></a>
+              </ul>
+            </div>
+          </li></a>
+          <li><a href="profile.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
+        </ul>
+      </div>
+    </section>
 
-        </section>
-
-    </body>
-
-
+    <section id="s2">
+      <div>
+        <h2>Welcome To Story-eCommerce</h2>
+        <h3>Sign-in To Get Amazing Offers!</h3>
+      </div>
+      <div id="d2">
+        <label id="l1" for="email">E-mail &nbsp; &nbsp;</label>
+        <input id="i1" type="email" class="email" placeholder="Email" /><br />
+        <label id="l1" for="password">Password&nbsp;</label>
+        <input
+          id="i1"
+          type="password"
+          class="password"
+          placeholder="Password"
+          min="6"
+          max="20"
+        /><br />
+        <button id="b" type="submit" class="button">Log In Now</button>
+        <p id="p1">
+          Don't Have an Account? <a id="a1" href="sign-up.html">Sign-up Now!</a>
+        </p>
+      </div>
+    </section>
+  </body>
 </html>

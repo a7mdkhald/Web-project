@@ -36,6 +36,7 @@ h1{
     padding: 0 20px;
     position: relative;
     margin: 0;
+    border-left: 1px dotted white ;
 }
 #navbar li a{
     text-decoration: none;
@@ -48,8 +49,10 @@ h1{
 #navbar li a:hover,
 #navbar li a.active{
     color:#088178;
+    background: #fcfcfc;
+    border-radius: 8px;
 }
-#navbar li a.active::after,
+ #navbar li a.active::after,
 #navbar li a:hover::after{
     content: "";
     width: 30%;
@@ -58,7 +61,7 @@ h1{
     height: 2px;
     bottom: -4px;
     left: 20px;
-}
+} 
  #navbar input[type=text]{
     float: right;
     padding: 6px;
@@ -68,9 +71,30 @@ h1{
     font-size: 17px;
 }
 
+ul li ul {
+  width: 110px;
+  background-color: #99bdb2;
+  background-size: contain;
+  margin-right: 10px;
+  display: none;
+  
+}
+ul li ul li{
+  list-style-type: none;
+  border-bottom: 1px dotted white ;
+  height: 40px;
+}
+
+ul li:hover ul{
+  display: block;
+  position: absolute;
+  margin-right: 20px;
+  
+}
+
 
 #s2{
-    background-image: url('Home_pic.png');
+    background-image: url('Home_pic.png') ;;
     background-position: top 0 left 25%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -82,6 +106,7 @@ h1{
     align-items: flex-start;
     justify-content: center;
     z-index: -100;
+    
 }
 h2{
     font-size: 35px;
@@ -167,7 +192,8 @@ padding: 0 20px;
   
   /* Slideshow container */
   #slideshow-container {
-    outline: #717171;
+    outline: #717171 ;
+    outline-style: solid;
     max-width: 500px;
     margin: 0 0 50px 800px;
     z-index: 100;
@@ -177,7 +203,7 @@ padding: 0 20px;
   /* Hide the images by default */
   #mySlides {
     
-    display: none;
+     display:none; 
   }
   
   /* Next & previous buttons */
@@ -200,6 +226,7 @@ padding: 0 20px;
   /* Position the "next button" to the right */
   .next {
     right: 150px;
+    border-radius: 3px 0 0 3px;
     
   }
   
@@ -242,13 +269,12 @@ padding: 0 20px;
   }
   
   /* Fading animation */
-.fade{
+ .fade{
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
-  @keyframes fade { from {opacity: 0.4} to {opacity: 1}}
-
-
+  @keyframes fade { from {opacity: 0.4} to {opacity: 1}} 
+  
 
 
