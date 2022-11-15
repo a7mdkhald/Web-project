@@ -10,6 +10,7 @@ h1{
     color: darkslategray;
     margin: 0;
 }
+/*----------------------------------------------------------nav--------------------------------------------------------------------------------------------------------*/
 #nav{
     size: 300px;
     display: flex;
@@ -95,8 +96,17 @@ ul li:hover ul{
 #sub-menu {
   z-index: 300;
 }
+#img1{
+  width: 120px;
+  height: 60px;
+}
+#img2{
+    
+  width: 40px;
+  height: 40px;
+}
 
-
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 #s2{
     background-image: url('Home_pic.png') ;;
     background-position: top 0 left 25%;
@@ -170,92 +180,62 @@ padding: 0 20px;
     font-weight: 600;
     transition-duration: 0.4s;
 }
-#d3{
-  
-  position: absolute;
-  display:block;
-  left: 12%;
-  top: 1000px;
-  font-size: 100px;
-  text-align: center;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border: 0px;
-  background-color: #eef06b;
-  background-size: contain;
-}
-#d4{
-  
-  position: absolute;
-  display:block;
-  left: 38%;
-  top: 1000px;
-  font-size: 80px;
-  text-align: center;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border: 0px;
-  background-color: #eef06b;
-  background-size: contain;
-}
-#d5{
-  
-  position: absolute;
-  display:block;
-  left: 67%;
-  top: 1000px;
-  font-size: 100px;
-  text-align: center;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  border: 0px;
-  background-color: #eef06b;
-  background-size: contain;
-}
-#d6{
-  position: absolute;
-  width: 150px;
-  left: 100px;
-  font-size: 60px;
-}
-#img2{
-    
-    width: 40px;
-    height: 40px;
-}
-#img1{
-    width: 120px;
-    height: 60px;
-}
+
+
+
 
 #sec2{
-  
+    
     background-image: url(https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000);
     background-repeat: no-repeat;
     background-size:cover;
+    z-index: -150;
+}
+#Small-container{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 200;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  z-index: -150;
 }
 #po #p3{
-  font-size: 30px;
+  font-size: 30px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ 
 }
 
 #sec2 #po{
+  background-color: white;
   position: relative;
-  z-index: 100;
+  z-index: 300;
  
   width:fit-content;
   padding: 40px 20px;
   text-align: center;
 
-  box-shadow: 0 0 20 0px  rgba(255, 0, 0, 0.1);
+  box-shadow: 0px 0px 20px 0px  rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  overflow: hidden;
   transition: transform 0.5s;
   
 }
 #sec2 #po:hover{
   transform: translateY(-10px);
+  
+}
+#sec2 #img3:hover{
+  transform: scale(0.9) rotate(-10deg);
+  opacity: 0.8;
 }
 #sec2 a{
   
-  width:50%;
+  width:100%;
   position: relative;
-  left: 10%;
+  
  
   
 }

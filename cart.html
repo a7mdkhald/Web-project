@@ -1,0 +1,143 @@
+<html>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story online shop</title>
+    <link rel="stylesheet" href="cart.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    
+    </head>
+    <body>
+        
+        <section>
+            <section id="nav">
+                <img id="img1" src="Title.webp" alt="Story_img">
+                <div id="d1">
+                  <ul id="navbar" >
+                    <li><input id="bar" type="text" placeholder="search" /> 
+                      <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
+                    <li><a class="active" href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shopping</a>
+                    <div id="sup-menu" class="dropdown">
+                      <ul>
+                        <li><a href="featured.html">featured</a></li>
+                        <li><a href="categories.html">categories</a></li>
+                      </ul>
+                      </div>
+                      </li></a>
+                    <li><a href="#d6">Blog</a></li>
+                    <li><a href="#d6">Contact</a></li>
+                    <li><a href="#d6">About</a></li>
+                    
+                    
+                    <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+                      <div id="sup-menu">
+                        <ul>
+                          <li><a id="a2" href="register.html" target="_blank">Sign in</li></a>
+                          <li><a id="a2" href="sign-up.html" target="_blank">Sign up</li></a>
+                        </ul>
+                      </div>
+                    </li></a>
+                    <li><a href="cart.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
+                  </ul>
+                </div>
+        </section>
+
+        <section id="cart-home" class="cart-home">
+            <div>
+                <p id='p1' class="t1"> Shopping cart</p>
+            </div>
+            <br>
+            <br>
+        </section>
+        <section id="cart-container" class="cart-cortainer">
+            <table width="80%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Total</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" ><i> Delete</i></a></td>
+                        <td><img src="shirt.jpg" id="img3" alt=""></td>
+                        <td>
+                            <h5>Shirt </h5>
+                        </td>
+                        <td>
+                            <h5>$80</h5>
+                        </td>
+                        <td><input id="input" type="number"></td>
+                        <td>
+                            <h5>$200.00</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" ><i> Delete</i></a></td>
+                        <td><img src="pants.jpg" id="img3" alt=""></td>
+                        <td>
+                            <h5>Pants </h5>
+                        </td>
+                        <td>
+                            <h5>$70</h5>
+                        </td>
+                        <td><input id="input" type="number"></td>
+                        <td>
+                            <h5>$130.00</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" ><i> Delete</i></a></td>
+                        <td><img src="lklok.webp" id="img3" alt=""></td>
+                        <td>
+                            <h5>Laklok </h5>
+                        </td>
+                        <td>
+                            <h5>$50</h5>
+                        </td>
+                        <td><input id="input" type="number"></td>
+                        <td>
+                            <h5>$100.00</h5>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br>
+        <br>
+        <section id="cart-bot" class="cart-container">
+            <div class="row">
+                <div id="Coupon" class="Coupon col-lg-6 col-mg-6 col-12">
+                    <h5>COUPON</h5>
+                    <p>Enter your coupon code if you have one </p>
+                    <input type="text " placeholder="Coupon code">
+                    <button type="submit">APPLY COUPON</button>
+                </div>
+                <div id="Total" class="Total">
+                    <h5>CART TOTAL</h5>
+                    <div id="s2" class="d-flex justify-content-between"> 
+                        <h6>Shipping </h6>
+                        <p>$200.00</p>
+                    </div>
+                    <hr class="second-hr">
+                <div class="d-flex justify-content-between">
+                    
+                    <div id="s2">
+                        <h6>Total </h6>
+                        <p>$200.00</p>
+                    </div>
+                    <button>Proceed to checkout </button>
+                </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+    </body>
+</html>
