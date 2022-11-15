@@ -224,58 +224,40 @@ padding: 0 20px;
     width: 120px;
     height: 60px;
 }
-#img3{
-  
-  outline: white;
-  outline:solid;
-  border: 3px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: #77beba;
-  background-size: 110%  ;
-    
-  position: relative;
-  left: 10%;
-  margin-top: 100px;
-  }
-#img3:hover{
-  filter: opacity(10%);
-}
-#img4{
-  outline: white;
-  outline:solid;
-  border: 3px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: #77beba;
-  background-size: 110%  ;
-    
-  position: relative;
-  left: 15%;
-  margin-top: 100px;
-}
-#img4:hover{
-  filter: opacity(10%);
-}
-#img5{
-  outline: white;
-  outline:solid;
-  border: 3px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  background-color: #77beba;
-  background-size: 110%  ;
-    
-  position: relative;
-  left: 20%;
-  margin-top: 100px;
-}
-#img5:hover{
-  filter: opacity(10%);
-}
+
 #sec2{
-  padding-bottom: 100px;
-    padding-left: 100px; 
+  
     background-image: url(https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000);
     background-repeat: no-repeat;
     background-size:cover;
+}
+#po #p3{
+  font-size: 30px;
+}
+
+#sec2 #po{
+  position: relative;
+  z-index: 100;
+ 
+  width:fit-content;
+  padding: 40px 20px;
+  text-align: center;
+
+  box-shadow: 0 0 20 0px  rgba(255, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.5s;
+  
+}
+#sec2 #po:hover{
+  transform: translateY(-10px);
+}
+#sec2 a{
+  
+  width:50%;
+  position: relative;
+  left: 10%;
+ 
+  
 }
 #button1{
     transition-duration: 0.4s;
