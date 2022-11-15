@@ -43,10 +43,13 @@
     </section>
 <div class ="menu">
 <ul id="menu-list">
-    <li id="list"><button  class="menu-btn" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong >men</strong> </button></li>
+    <li id="list"><button  class="menu-btn" value="hover"  onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong >men</strong> </button></li>
     <li  id="list"><button  class="menu-btn" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>women</strong></button></li>
     <li id="list"><button class="menu-btn" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>kids</strong></button></li>
 </ul>
+</div>
+<div class="men-sub">
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti rem repudiandae ab fugit quibusdam enim suscipit tempore quis</p>
 </div>
     <div class="items">
         <ul id="items-list">
@@ -70,8 +73,11 @@
             </li>
             <li><div class="item-lis"></div></li>
         </ul>
-        
     </div>
-
+<script>
+  function mendiv(){
+    document.getElementsByClassName("men-sub").style.display = "block";
+  }
+</script>
 </body>
 </html>
