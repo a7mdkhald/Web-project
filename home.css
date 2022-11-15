@@ -271,6 +271,7 @@ padding: 0 20px;
   filter: opacity(10%);
 }
 #sec2{
+  padding-bottom: 100px;
     padding-left: 100px; 
     background-color: #eff1f0;
     filter:grayscale(200px);
