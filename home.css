@@ -21,6 +21,7 @@ h1{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 500;
     
 }
 #navbar{
@@ -36,7 +37,7 @@ h1{
     padding: 0 20px;
     position: relative;
     margin: 0;
-    border-left: 1px dotted white ;
+    border-right: 1px dotted white ;
 }
 #navbar li a{
     text-decoration: none;
@@ -91,6 +92,9 @@ ul li:hover ul{
   margin-right: 20px;
   
 }
+#sub-menu {
+  z-index: 300;
+}
 
 
 #s2{
@@ -144,18 +148,21 @@ h5{
 padding: 0 20px;
 }
 #d2{
-    position: fixed;
+    position: absolute;
+    
     left: 100px;
     font-size: 100px;
 }
 #b1{
-    border: 0;
+    border: 3px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
     background-color: #77beba;
-    font-size: 17px;
+    background-size: contain;
+    font-size: 30px;
 }
 #a1:hover{
     color: white;
+    font-size: 40px;
 }
 #a1{
     text-decoration: none;
@@ -163,13 +170,112 @@ padding: 0 20px;
     font-weight: 600;
     transition-duration: 0.4s;
 }
+#d3{
+  
+  position: absolute;
+  display:block;
+  left: 12%;
+  top: 1000px;
+  font-size: 100px;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 0px;
+  background-color: #eef06b;
+  background-size: contain;
+}
+#d4{
+  
+  position: absolute;
+  display:block;
+  left: 38%;
+  top: 1000px;
+  font-size: 80px;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 0px;
+  background-color: #eef06b;
+  background-size: contain;
+}
+#d5{
+  
+  position: absolute;
+  display:block;
+  left: 67%;
+  top: 1000px;
+  font-size: 100px;
+  text-align: center;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  border: 0px;
+  background-color: #eef06b;
+  background-size: contain;
+}
+#d6{
+  position: absolute;
+  width: 150px;
+  left: 100px;
+  font-size: 60px;
+}
 #img2{
+    
     width: 40px;
     height: 40px;
 }
 #img1{
     width: 120px;
     height: 60px;
+}
+#img3{
+  
+  outline: white;
+  outline:solid;
+  border: 3px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #77beba;
+  background-size: 110%  ;
+    
+  position: relative;
+  left: 10%;
+  margin-top: 100px;
+  }
+#img3:hover{
+  filter: opacity(10%);
+}
+#img4{
+  outline: white;
+  outline:solid;
+  border: 3px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #77beba;
+  background-size: 110%  ;
+    
+  position: relative;
+  left: 15%;
+  margin-top: 100px;
+}
+#img4:hover{
+  filter: opacity(10%);
+}
+#img5{
+  outline: white;
+  outline:solid;
+  border: 3px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #77beba;
+  background-size: 110%  ;
+    
+  position: relative;
+  left: 20%;
+  margin-top: 100px;
+}
+#img5:hover{
+  filter: opacity(10%);
+}
+#sec2{
+  padding-bottom: 100px;
+    padding-left: 100px; 
+    background-image: url(https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 #button1{
     transition-duration: 0.4s;
@@ -184,6 +290,35 @@ padding: 0 20px;
 #button1:hover{
     color: white;
 }
+#last{
+  size: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px 30px ;
+  background: #ffffff;
+  z-index: 500;
+  display: flex;
+    list-style: none;
+    padding-right: 250px;
+    justify-content:center;
+    margin: 0;
+    position: relative;
+}
+#last li{
+  padding: 0 200px;
+    position: relative;
+    
+    border-right: 1px dotted rgb(0, 0, 0) ;
+}
+#last li p{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  transition: 0.2s ease;
+  position: relative;
+}
 
 
 /* ....................................................slide show...................................................... */
@@ -193,9 +328,10 @@ padding: 0 20px;
   /* Slideshow container */
   #slideshow-container {
     background-image: url("images2.jpg");
+    position: relative;
     background-size: 100% 100%;
     width: 55%;
-    height: 400px;
+    height: 50%;
     outline: #717171 ;
     outline-style: solid;
     max-width: 500px;
@@ -216,7 +352,7 @@ padding: 0 20px;
   /* Hide the images by default */
   #mySlides {
     width: 100%;
-    height: 150%;
+    height: 200%;
     display:none; 
   }
   
@@ -235,11 +371,12 @@ padding: 0 20px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    
   }
   
   /* Position the "next button" to the right */
   .next {
-    right: 220px;
+    right: 16%;
     border-radius: 3px 0 0 3px;
     
   }
@@ -283,14 +420,14 @@ padding: 0 20px;
   }
   
   /* Fading animation */
- .fade{
+ /* .fade{
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
   @keyframes fade {
      from {opacity: 0.4} to {opacity: 1}
-    } 
+    }  */
   
 
 
