@@ -353,7 +353,6 @@ m
     background-color: white;
 }
 .men-sub{
-    background-color: #ffffff;
     
     display: none;
     padding-top: 10px;
@@ -370,3 +369,41 @@ margin-left: 200px;
 padding: 0%;
 color: white;
 }
+.women-sub{
+        display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: -150px;
+    margin-left: 530px;
+    padding-left: 50px;
+    border: 0%;
+    width: 400px;
+    background-color: #000000;
+}.women-sub > p {
+margin-left: 200px;
+padding: 0%;
+color: white;
+}.kids-sub{
+        display: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: -150px;
+    margin-left: 747px;
+    padding-left: 50px;
+    border: 0%;
+    width: 400px;
+    background-color: #000000;
+}.kids-sub > p {
+margin-left: 200px;
+padding: 0%;
+color: white;
+}
+.prev{
+    position: relative; right: 700px; top: 200px;
+}
+.next{
+    position: relative; left: 10px; top: 200px;
+}
+
