@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="shop.css">
     <link rel="stylesheet" href="normalize.css" />
+    <script src="shop.js"></script>
 </head>
 <body>
     <section id="nav">
@@ -43,12 +44,18 @@
     </section>
 <div class ="menu">
 <ul id="menu-list">
-    <li id="list"><button  class="menu-btn" value="hover"  onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong >men</strong> </button></li>
-    <li  id="list"><button  class="menu-btn" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>women</strong></button></li>
-    <li id="list"><button class="menu-btn" value="hover" onmouseover="this.style.backgroundColor='black';return true;"onmouseout="this.style.backgroundColor='transparent';return true;"><strong>kids</strong></button></li>
+    <li id="list"><button  class="menu-btn" id="men-btn" onmouseover="show1()" onmouseout="hide1()" onmouseout="this.style.backgroundColor='transparent';return true;"><strong >men</strong> </button></li>
+    <li  id="list"><button  class="menu-btn" id="women-btn" onmouseover="show2()" onmouseout="hide2()" onmouseout="this.style.backgroundColor='transparent';return true;"><strong>women</strong></button></li>
+    <li id="list"><button class="menu-btn" id="kids-btn" onmouseover="show3()" onmouseout="hide3()" onmouseout="this.style.backgroundColor='transparent';return true;"><strong>kids</strong></button></li>
 </ul>
 </div>
 <div class="men-sub">
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti rem repudiandae ab fugit quibusdam enim suscipit tempore quis</p>
+</div>
+<div class="women-sub">
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti rem repudiandae ab fugit quibusdam enim suscipit tempore quis</p>
+</div>
+<div class="kids-sub">
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam deleniti rem repudiandae ab fugit quibusdam enim suscipit tempore quis</p>
 </div>
     <div class="items">
@@ -71,13 +78,14 @@
                 <h5 class="item-head">checkered shirt</h5>
                 </div>
             </li>
-            <li><div class="item-lis"></div></li>
+            <li><a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            </li>
+             <li>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </li>
         </ul>
     </div>
-<script>
-  function mendiv(){
-    document.getElementsByClassName("men-sub").style.display = "block";
-  }
-</script>
+    
+
 </body>
 </html>

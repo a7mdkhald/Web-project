@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="featured.css">
+    <script src="featured.js"></script>
+</head>
+<body>
+    <section id="nav">
+            <img id="img1" src="Title.webp" alt="Story_img">
+            <div id="d1">
+              <ul id="navbar" >
+                <li>
+                    <input id="bar" type="text" placeholder="search" />
+                    <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
+                </li>
+                <li><a href="home.html">Home</a></li>
+                <li class="dropdown"><a class="active"  href="shop.html">Shopping</a>
+                 <div class="dropdown-content">
+                    <p><a href="featured.html">Featured</a></p><br>
+                    <p><a href="categories.html">categories</a></p>
+                  </div>
+                <li><a  href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                
+                
+                <li class="dropdown"><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+                  <div class="dropdown-content">
+                    <p><a href="register.html">Sign in</a></p><br>
+                    <p><a href="sign-up.html">Sign up</a></p>
+                  </div>
+                </li></a>
+                <li><a href="profile.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
+              </ul>
+            </div>
+          </section>
+          <div id="filter">
+            <h2>Filter</h2>
+            <h4>gender <button id="ard-btn" onclick="show1()"><i class="arrow down"></i></button></h4>
+            <div class="gen-li">
+            <ul class="filter-list">
+                <li><input type="checkbox" name="men" id="mencheck"><label for="mencheck">Men</label></li>
+                <li><input type="checkbox" name="women" id="womencheck"><label for="womencheck">Women</label></li>
+                <li><input type="checkbox" name="boys" id="boyscheck"><label for="boyscheck">Boys</label></li>
+                <li><input type="checkbox" name="girls" id="girlscheck"><label for="girlscheck">Girls</label></li>
+            </ul>
+            </div>
+            
+            <h4>type <button id="ard-btn" onclick="show2()"><i class="arrow down"></i></button></h4>
+            <div class="type-li">
+            <ul class="filter-list">
+                <li><input type="checkbox" name="tops" id="topcheck"><label for="topcheck">Tops</label></li> 
+                <li><input type="checkbox" name="bottoms" id="bottomcheck"><label for="bottomcheck">Bottoms</label></li>
+                <li><input type="checkbox" name="accessories" id="acccheck"><label for="acccheck">Accessories</label></li>
+            </ul>
+            </div>
+            
+            <h4>size <button id="ard-btn" onclick="show3()"><i class="arrow down"></i></button></h4>
+            <div class="size-li">
+            <ul class="filter-list">
+                <li><input type="checkbox" name="small" id="scheck"><label for="scheck">S</label></li>
+                <li><input type="checkbox" name="medium" id="mcheck"><label for="mcheck">M</label></li>
+                <li><input type="checkbox" name="large" id="lcheck"><label for="lcheck">L</label></li>
+                <li><input type="checkbox" name="xlarge" id="xlcheck"><label for="xlcheck">XL</label></li>
+            </ul>
+            </div>
+            <h4>price range <button id="ard-btn" onclick="show4()"><i class="arrow down"></i></button></h4>
+            <div class="price-range">
+                <input type="range" id="range" max="5000" min="0" oninput="range()"><br>
+                <input type="text" name="min" placeholder="minimum" id="min" class="pricetxt">
+                <input type="text" name="max" placeholder="maximum" id="max" class="pricetxt">
+            </div>
+          </div>
+          <section id="products">
+            <div id="pr1" class="prod" >
+                <div class="link"><a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt=""></a></div>
+                <div class="inf"><h2>black jacket</h2>
+                <h4>50.00$</h4>
+                </div>
+            </div>
+            <div id="pr2" class="prod">
+                <div class="link"><a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt=""></a></div>
+                <div class="inf"><h2>black jacket</h2>
+                <h4>50.00$</h4>
+                </div>
+            </div>
+              <div id="pr3" class="prod">
+                <div class="link"><a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt=""></a></div>
+                <div class="inf"><h2>black jacket</h2>
+                <h4>50.00$</h4>
+                </div>
+            </div>
+              <div id="pr4" class="prod">
+                <div class="link"><a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt=""></a></div>
+                <div class="inf"><h2>black jacket</h2>
+                <h4>50.00$</h4>
+                </div>
+            </div>
+              <div id="pr5" class="prod">
+                <div class="link"><a href=""><img src="https://img.abercrombie.com/is/image/anf/KIC_144-2069-1446-900_prod1?policy=product-medium&wid=350&hei=438" alt=""></a></div>
+                <div class="inf"><h2>black jacket</h2>
+                <h4>50.00$</h4>
+                </div>
+          </section>
+          <footer id="footer">
+        <ul id="last">
+        <li>
+          <p name="about" id="d6">
+            About us <br><br> Omar hashim <br>Fares tarek  <br> Ahmed khaled <br> 
+          </p> 
+        </li>
+        <li>
+          <p id="d6">
+            contacts   <br><br> 031654320201321 <br>03246768765435 <br> 1564321021546314 <br> 
+          </p>
+        </li>
+        <li>
+          <p id="d6">
+            Blog  
+          </p>
+        </li>
+      </ul>
+          </footer>
+</body>
+</html>
