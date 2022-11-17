@@ -3,11 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size:cover;
 }
-#logo{
-    width: 70px;
-    margin: 0;
-    padding: 0;
-}
+
 h1{
     font-size: 30px;
     font-family:fantasy;
@@ -15,89 +11,6 @@ h1{
     color: darkslategray;
     margin: 0;
 }
-#nav{
-    size: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    background: #99bdb2;
-    box-shadow: 0 5px 15px rgba(61, 60, 55, 0.836);
-    position: sticky;
-    top: 0;
-    left: 0;
-    
-}
-#navbar{
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content:center;
-    margin: 0;
-    position: relative;
-    
-}
-#navbar li{
-    padding: 0 20px;
-    position: relative;
-    margin: 0;
-    border-left: 1px dotted white ;
-}
-#navbar li a{
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 600;
-    color: black;
-    transition: 0.2s ease;
-    position: relative;
-}
-#navbar li a:hover,
-#navbar li a.active{
-    color:#088178;
-    background: #fcfcfc;
-    border-radius: 8px;
-}
- #navbar li a.active::after,
-#navbar li a:hover::after{
-    content: "";
-    width: 30%;
-    position: absolute;
-    background: #088178;
-    height: 2px;
-    bottom: -4px;
-    left: 20px;
-} 
- #navbar input[type=text]{
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 16px;
-    font-size: 17px;
-}
-
-ul li ul {
-  width: 110px;
-  background-color: #99bdb2;
-  background-size: contain;
-  margin-right: 10px;
-  display: none;
-  
-}
-ul li ul li{
-  list-style-type: none;
-  border-bottom: 1px dotted white ;
-  height: 40px;
-}
-
-ul li:hover ul{
-  display: block;
-  position: absolute;
-  margin-right: 20px;
-  
-}
-
-
 #s2{
     background-image: url('Home_pic.png') ;;
     background-position: top 0 left 25%;
@@ -191,111 +104,7 @@ padding: 0 20px;
 }
 
 
-/* ....................................................slide show...................................................... */
 
-
-  
-  /* Slideshow container */
-  #slideshow-container {
-    background-image: url("images2.jpg");
-    background-size: 100% 100%;
-    width: 55%;
-    height: 400px;
-    outline: #717171 ;
-    outline-style: solid;
-    max-width: 500px;
-    margin: 0 0 50px 800px;
-    box-shadow: 1px 2px 10px 5px white;
-    animation: slider 10s infinite linear;
-    z-index: 100;
-    
-  }
-  @keyframes slider{
-    0%{background-image: url("img1.jpg");}
-    25%{background-image: url("img2.webp");}
-    50%{background-image: url("img3.jpg");}
-    
-
-  }
-  
-  /* Hide the images by default */
-  #mySlides {
-    width: 100%;
-    height: 150%;
-    display:none; 
-  }
-  
-  /* Next & previous buttons */
-  .prev, 
-  .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-  .next {
-    right: 220px;
-    border-radius: 3px 0 0 3px;
-    
-  }
-  
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover,
-   .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  
-  
-  
-  /* Number text (1/3 etc) */
-  /* .numbertext {
-    color: #ffffff;
-    font-size: 30px;
-    padding:8px 12px;
-    
-    
-  } */
-  
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
-  #dot{
-    margin: 0 0 100px 1000px;
-  }
-  
-  #dot1.active,
-   #dot1.dot:hover {
-    background-color: #717171;
-  }
-  
-  /* Fading animation */
- .fade{
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-     from {opacity: 0.4} to {opacity: 1}
-    } 
 .menu{
     position: fixed;
     top: 100px;

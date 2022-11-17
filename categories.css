@@ -1,0 +1,94 @@
+#nav{
+    size: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    background: #99bdb2;
+    box-shadow: 0 5px 15px rgba(61, 60, 55, 0.836);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    
+}
+#navbar{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content:center;
+    margin: 0;
+    position: relative;
+    
+}
+#navbar li{
+    padding: 0 20px;
+    position: relative;
+    margin: 0;
+    border-right: 1px dotted white ;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    transition: 0.2s ease;
+    position: relative;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178;
+    background: #fcfcfc;
+    border-radius: 8px;
+}
+ #navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    position: absolute;
+    background: #088178;
+    height: 2px;
+    bottom: -4px;
+    left: 20px;
+} 
+ #navbar input[type=text]{
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+
+ul li ul {
+  width: 110px;
+  background-color: #99bdb2;
+  background-size: contain;
+  margin-right: 10px;
+  display: none;
+  
+}
+ul li ul li{
+  list-style-type: none;
+  border-bottom: 1px dotted white ;
+  height: 40px;
+}
+
+ul li:hover ul{
+  display: block;
+  position: absolute;
+  margin-right: 20px;
+  
+}
+#sub-menu {
+  z-index: 300;
+}
+#img1{
+  width: 120px;
+  height: 60px;
+}
+#img2{
+    
+  width: 40px;
+  height: 40px;
+}

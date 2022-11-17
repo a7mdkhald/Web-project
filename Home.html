@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css%22%3E">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +11,24 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="normalize.css" />
     <script type="text/javascript" src="Home.js"></script>
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="Header.css" />
+    <script type="text/javascript" src="Header.js"></script>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="Header.css" />
+    
+    <script src="shop.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+      $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+        });
+</script>
   </head>
 
   
@@ -18,7 +39,7 @@
         <ul id="navbar" >
           <li><input id="bar" type="text" placeholder="search" /> 
             <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
-          <li><a class="active" href="home.html">Home</a></li>
+          <li><a  href="home.html">Home</a></li>
           <li><a href="shop.html">Shopping</a>
           <div id="sup-menu" class="dropdown">
             <ul>
@@ -28,26 +49,28 @@
             </div>
             </li></a>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="#d6">Contact</a></li>
-          <li><a href="#d6">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           
           
-          <li><a href="profile.html" target="_blank"><img id="img2" src="user.png" />
+          
+          <li><a href="profile.html" ><img id="img2" src="user.png" />
             <div id="sup-menu">
               <ul>
-                <li><a id="a2" href="register.html" target="_blank">Sign in</li></a>
-                <li><a id="a2" href="sign-up.html" target="_blank">Sign up</li></a>
+                <li><a id="a2" href="register.html" >SignIn</li></a>
+                <li><a id="a2" href="sign-up.html" >SignUp</li></a>
               </ul>
             </div>
           </li></a>
-          <li><a href="cart.html" target="_blank"><img id="img2" src="cart.webp" /></li></a>
+          <li><a href="cart.html" ><img id="img2" src="cart.webp" /></li></a>
         </ul>
       </div>
     </section>
+
+    
       <section id="s2">
         <!-- Slideshow container -->
         <div id="d2">
-          <h5>trade-in-offer</h5>
+          <h5 >trade-in-offer</h5>
           <h3>Super value Deals<br /></h3>
           <h4>On all our Products</h4>
           <button id="b1"><a id="a1" href="shop.html">shop now!</a></button>
@@ -117,29 +140,72 @@
         </div>
       </section>
       
-      <br>
-      <br>
-      <ul id="last">
-        <li>
-          <p name="about" id="d6">
-            About us <br><br> Omar hashim <br>Fares tarek  <br> Ahmed khaled <br> 
-          </p> 
-        </li>
-        <li>
-          <p id="d6">
-            contacts   <br><br> 031654320201321 <br>03246768765435 <br> 1564321021546314 <br> 
-          </p>
-        </li>
-        <li>
-          <p id="d6">
-            Blog  
-          </p>
-        </li>
-      </ul>
+     
       
       
       
-      
+<footer class="mt-5 py-5">
+    
+        <div class="row container mx-auto pt-5">
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <img id="imga1" src="Title.webp" alt="Story_img" width="150px">
+                <p id="pd1">Trusted by millions of businesses worldwide
+                    Shopify handles everything from marketing and payments, to secure checkout and shipping
+                    Brands that use Shopify</p>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
+                <h5 id="hh" class="pb-2">contact us</h5>
+                <div>
+                    <h6 id="hhh" class="text-uppercase">address</h6>
+                    <p id="pd1">123 STREET NAME, CITY, EG </p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Phone</h6>
+                    <p id="pd1">(123) 456 789</p>
+                </div>
+                <div>
+                    <h6 class="text-uppercase">Email</h6>
+                    <p id="pd1">MAIL@EXAMPLE.COM</p>
+                </div>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 id="hh" class="pb-2">Founders</h5>
+                <div class="row">
+                    <ul>
+                        <li>Omar Hashim</li>
+                        <li>Ahmed Khalid</li>
+                        <li>Fares Tarek</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-one col-lg-3 col-md-6 col-12">
+                <h5 id="hh" class="pb-2">instagram</h5>
+                <div class="row">
+                    <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/b9/a9/a4/b9a9a4f3dab5cd9beb5d7c8d91b84445.jpg">
+                    <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/a9/03/49/a90349617102cf2d7fa7aa6f0515efed.jpg" >
+                    <img class="img-fluid w-25 h-100 m-2" src="https://images.squarespace-cdn.com/content/v1/547a3834e4b053a861c4874e/1624219205079-2MV5PECBTTNFHIIYC8SX/Sustainably+Chic+%7C+Sustainable+Fashion+Blog+%7C+Sustainable+and+Ethical+Clothing+Brands+for+Men.jpg?format=1000w" >
+                    <img class="img-fluid w-25 h-100 m-2" src="https://nextluxury.com/wp-content/uploads/fashion-mens-trendy-outfits.jpg" >
+                    <img class="img-fluid w-25 h-100 m-2" src="https://nextluxury.com/wp-content/uploads/mens-clothing-trendy-outfits-styles-navy-dress-shirt.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="copyright mt-5 ">
+            <div class="row container mx-auto">
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <img class="img-fluid w-50 h-125 m-2" src="https://i.ytimg.com/vi/i09C02151PI/maxresdefault.jpg">
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+                    <p id="pd1">story online shopping 2022. all right reserved</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                    <a href="#"><i class="fa-solid fa-hashtag"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-f"></i></a>
+                </div>
+            </div>
+        </div>
+        
+</footer>
       
 
     
