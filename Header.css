@@ -104,7 +104,7 @@ ul li:hover ul{
 }
 #bar{
     width: 200px;
-    height: 20px;
+    height: 30px;
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -122,11 +122,12 @@ ul li:hover ul{
     -o-border-radius: 40px;
     margin-left: 0px;
     border: 0px;
-    position: relative; left: 245px; top: 9px;
+    position: relative; left: 280px; top: 9px;
     width: 40px;
     height: 30px;
   }#srch-bar{
-    position: relative; right: 5px;
+    position: relative ; top: -3px; right: 30px;
+    width: 300px;
   }#srch:hover{
     cursor: pointer;
 }
