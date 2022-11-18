@@ -50,3 +50,37 @@ h3{
 #a1{
     font-weight: 600;
 }
+#d3{
+
+    padding-bottom:  30px; 
+}
+#d4{
+    padding-bottom: 40px;
+}
+.fa-facebook:hover {
+    color: #4267b3 !important;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2 !important;
+}
+
+.fa-instagram:hover {
+    color: #ce2b94 !important;
+}
+
+.fa-invision:hover {
+    color: #f83263 !important;
+}
+
+.fa-github:hover {
+    color: #161414 !important;
+}
+
+.fa-whatsapp:hover {
+    color: #25d366 !important;
+}
+
+.fa-snapchat:hover {
+    color: #fffb01 !important;
+}

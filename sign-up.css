@@ -27,7 +27,7 @@ body{
     width: 13%;
 }
 #d2{
-    margin-top: 10px ;
+    margin-top: 15px ;
 }
 #b{
     /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
@@ -39,6 +39,7 @@ body{
     font-size: 15px;
     font-weight: 600;
     border-width: 1px;
+    margin-top: 27px;
 }
 #l1{
     font-weight: 700;
@@ -52,4 +53,34 @@ body{
 }
 #a1{
     font-weight: 600;
+}
+#d6{
+    padding-bottom: 20px;
+}
+.fa-facebook:hover {
+    color: #4267b3 !important;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2 !important;
+}
+
+.fa-instagram:hover {
+    color: #ce2b94 !important;
+}
+
+.fa-invision:hover {
+    color: #f83263 !important;
+}
+
+.fa-github:hover {
+    color: #161414 !important;
+}
+
+.fa-whatsapp:hover {
+    color: #25d366 !important;
+}
+
+.fa-snapchat:hover {
+    color: #fffb01 !important;
 }
