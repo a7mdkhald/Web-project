@@ -102,3 +102,31 @@ ul li:hover ul{
   width: 40px;
   height: 40px;
 }
+#bar{
+    width: 200px;
+    height: 20px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    margin-right: 0px;
+    border: 0px;
+    position: relative; right: 10px;
+}
+#srch{
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    margin-left: 0px;
+    border: 0px;
+    position: relative; left: 245px; top: 9px;
+    width: 40px;
+    height: 30px;
+  }#srch-bar{
+    position: relative; right: 5px;
+  }#srch:hover{
+    cursor: pointer;
+}
