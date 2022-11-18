@@ -1,5 +1,5 @@
 body{
-    background-image: url('Shop-on-Oxford-Street-1440x929.jpg');
+    background-image: url('https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000');
     background-repeat: no-repeat;
     background-size:cover;
 }
@@ -106,14 +106,19 @@ padding: 0 20px;
 
 
 .menu{
-    position: fixed;
+    position: relative;
     top: 100px;
     left: 0;
-    position: relative;
+    background-color: #ffffff;
+    width: 20px;
+    
 }
 #menu-list{
     list-style-type: none;
-
+    display: inline;
+    width: 800px;
+    height: 800px;
+    position: relative; left:70px;
 }
 #menu-list li{
     display: inline-block;
@@ -127,17 +132,16 @@ padding: 0 20px;
   padding-bottom: 0%;
 }
 #list{
-    padding: 50px;
+    padding: 0px;
 
 }.menu-btn{
     cursor: pointer;
     border: none;
     background: none;
     padding: none;
-     ;
     background-color: transparent;
         height: 50px;
-        width: 200px;
+        width: 250px;
         color: #000000;
         font-size: 1.5em;
 
@@ -149,6 +153,7 @@ m
 }#items-list li{
     display: inline-block;
     float: left;
+    padding: 0px;
 }#items-list{
     padding-top: 200px;
     margin-left: 425px;
@@ -160,6 +165,9 @@ m
     padding-top: 5px;
 }.item-lis{
     background-color: white;
+}
+#content{
+    height: 800px;
 }
 .men-sub{
     
@@ -173,6 +181,7 @@ m
     border: 0%;
     width: 400px;
     background-color: #000000;
+    position: absolute;bottom: 400px;left: 29px;
 }.men-sub > p {
 margin-left: 200px;
 padding: 0%;
@@ -189,6 +198,7 @@ color: white;
     border: 0%;
     width: 400px;
     background-color: #000000;
+    position: absolute;bottom: 400px;
 }.women-sub > p {
 margin-left: 200px;
 padding: 0%;
@@ -204,6 +214,7 @@ color: white;
     border: 0%;
     width: 400px;
     background-color: #000000;
+    position: absolute;bottom: 400px;
 }.kids-sub > p {
 margin-left: 200px;
 padding: 0%;

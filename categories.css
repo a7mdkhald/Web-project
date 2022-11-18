@@ -92,3 +92,239 @@ ul li:hover ul{
   width: 40px;
   height: 40px;
 }
+body{
+    background-image: url('https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.content{
+  height: 1700px;
+}
+
+#brands{
+  width: 1268px;
+  height: 250px;
+  background-color: #99bdb2;
+  position: relative; top: 1400px;
+left: 100px;
+}
+#accessories{
+  width: 1268px;
+  height: 250px;
+  background-color: #99bdb2;
+  position: relative; top: 300px;
+left: 100px;
+}
+#tops{
+  width: 1268px;
+  height: 250px;
+  background-color: #99bdb2;
+  position: relative; bottom: -100px;
+left: 100px;
+}#hdwr{
+  position: relative; left: 40px; top:5px;
+}#Belts{
+  position: relative;left: 50px;;
+}#acs{
+  position: relative;left: 150px;
+}
+#bottoms{
+  width: 1268px;
+  height: 250px;
+  background-color: #99bdb2;
+  position: relative; top: 200px;
+left: 100px;
+}
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+        z-index: 1;
+}
+
+	100% {
+		transform: scale(1.2);
+		-webkit-transform: scale(1.2);
+		-moz-transform: scale(1.2);
+		-ms-transform: scale(1.2);
+		-o-transform: scale(1.2);
+		z-index: 1;
+}
+}
+.zanim:hover{ animation: myAnim 1s ease 0s 1 normal forwards; -webkit-animation: myAnim 1s ease 0s 1 normal forwards;
+cursor: pointer;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+#ad{
+  position: relative; left: 20px;
+}
+#nike{
+  position: relative;left: 5px; top:10px ;
+}
+#ae{
+  position: relative;left: 5px; top:10px;
+}
+#usp{
+   position: relative;left: 5px; top:10px;
+}#ho{
+  position: relative;left: 5px; top:10px;
+}
+.zanim{
+  position: absolute;
+}
+#shrt{
+  position: relative;left: 5px; top:10px;
+}
+#tshrt{
+  position: relative;left: 5px; top:10px;
+}
+#ss{
+   position: relative;left: 5px; top:10px;
+}#ssp{
+  position: relative; left: 32px; top:5px;
+}
+#jum{
+  position: relative; left: 5px; top:10px;
+}
+#jp{
+  position: relative; left: 42px; top:5px;
+}
+#suit{
+  position: relative; left: 5px; top:10px;
+}
+#sts{
+  position: relative; left: 55px; top:5px;
+}#sp{
+  position: relative;left: 31px; top:5px ;
+}
+#sps{
+  position: relative;left: 40px; top:5px ;
+}
+#pts{
+  position: relative;left: 55px; top:5px ;
+}
+#bts{
+  width: 200px;
+  height: 200px;
+  position: relative; left:150px;
+}
+#jc{
+  position: relative; left: 50px;
+}
+#ts{
+  position: relative; left: 50px;
+}#s{
+  position: relative; left: 55px;
+}
+#sid-list{
+  list-style: none;
+}
+#jacket{
+  position: relative;left: 5px; top:10px;
+}
+#side-bar{
+  background-color: #fcfcfc;
+  width: 200px;
+  height: 400px;
+  margin: 0;
+  position: absolute;
+  z-index:10;
+}
+#br1{
+  background-color:#f3fbfc;
+  position: relative;
+  left:20px;
+  bottom: 5px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}
+#br2{
+  background-color:#f3fbfc;
+  position: relative;
+  left:200px;
+  bottom: 155px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}
+#brhd{
+  font-style: bold;
+  position: relative;
+  left: 20px;
+}
+#dice{
+  position: relative; left:80px;
+  height: 250px;
+}
+#br3{
+  background-color:#f3fbfc;
+  position: relative;
+  left:380px;
+  bottom: 305px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}
+#br4{
+  background-color:#f3fbfc;
+  position: relative;
+  left:560px;
+  bottom: 455px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}
+#br5{
+  background-color:#f3fbfc;
+  position: relative;
+  left:740px;
+  bottom: 605px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}#br6{
+  background-color:#f3fbfc;
+  position: relative;
+  left:920px;
+  bottom: 755px;
+  width: 150px;
+  padding-top: 10px;
+  height: 150px;
+  border-radius: 120px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  -ms-border-radius: 120px;
+  -o-border-radius: 120px;
+}
