@@ -32,12 +32,14 @@
 <body>
 
     <!-- Navbar top -->
-    <section id="nav">
+    <nav id="nav">
       <img id="img1" src="Title.webp" alt="Story_img">
       <div id="d1">
         <ul id="navbar" >
-          <li><input id="bar" type="text" placeholder="search" /> 
-            <!-- <button  id="button1" type="submit" class="button" >Search</button></li> -->
+                <div id="srch-bar">
+                    <input id="bar" type="text" placeholder="search" />
+                    <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>    
+                </div>
           <li><a  href="home.html">Home</a></li>
           <li><a href="shop.html">Shopping</a>
           <div id="sup-menu" class="dropdown">
@@ -63,76 +65,80 @@
           <li><a href="cart.html" ><img id="img2" src="cart.webp" /></li></a>
         </ul>
       </div>
-    </section>
+    </nav>
     
-       <section>
-        <div id="con-form">
-          <div id="contact-us">
-          <h1 class="hedf">Contact Us</h1>
-          <div id="parg"><p>Feel Free To Send Us Your Feedback,Suggestions Or Complaints</p></div>
-              <div class="form-group">
-                  <form action="#" class="contact">
-                      <div>
-                  <label for="name" id="name">Name</label>
-                  <input type="text" class="form-control" id="name" name="name"><br>
-                  </div>
-                  <div>
-                  <label for="email" id="email">Email</label>
-                  <input type="email" class="form-control" id="email" name="email"><br>
-                  </div>
-                  <div class="message">
-                  <label for="message" id="message">Message</label>
-                  <textarea name="messafe" id="message-box" cols="30" rows="3"></textarea><br>
-                  </div>
-                  <div id="sub-btn">
-                      <input type="submit" id="btn-sub">
-                  </div>
-                  </form>
-                  
-                  </div>
-              </div>
-          <div class="info">
-          <h1>Info</h1>
-          <ul id="info-list">
-              <li><div id="enmail"><img src="envelope_8.png" alt="" id="limg"> &emsp;<a href="">info@getintouch.st</a></div></li>
-              <li>
-              <div>
-              <ul id="phonenos">
-              <li><p>01145589665</p></li>
-              <li><p>035755539</p></li>
-              </ul>
-              </div>
-              </li>
-              <li><p>13,el-mosher st.,sidi gaber</p></li>
-              <li><p>9:00 - 18:00</p></li>
-          </ul>
-          </div>
-          <div id="socials">
-             <div id="sch2"> <h2>Social Media</h2></div>
-              <div class="card">
-          <div class="card-body">
-          
-              <div class="social-media">
-                  <span class="fa-stack fa-sm" id="fb-span">
-                      <i class="fas fa-circle fa-stack-2x" id="face"></i>
-                      <i class="fab fa-facebook fa-stack-1x fa-inverse" id="face"></i>
-                  </span>
-                  <span class="fa-stack fa-sm">
-                      <i class="fas fa-circle fa-stack-2x" id="twit"></i>
-                      <i class="fab fa-twitter fa-stack-1x fa-inverse" id="twit"></i>
-                  </span>
-                  <span class="fa-stack fa-sm">
-                      <i class="fas fa-circle fa-stack-2x" id="inst"></i>
-                      <i class="fab fa-instagram fa-stack-1x fa-inverse" id="inst"></i>
-                  </span>
-                  <span class="fa-stack fa-sm">
-                      <i class="fas fa-circle fa-stack-2x" id="what"></i>
-                      <i class="fab fa-whatsapp fa-stack-1x fa-inverse" id="what"></i>
-                  </span>
-              </div>
-          </div>
-      </div>
-       </section> 
+<section id="content">
+            <div class="cusservice">
+            <div class="head"><h1 class="hedf">Contact Us</h1>
+            <div id="parg"><p>Feel Free To Send Us Your Feedback,Suggestions Or Complaints</p></div></div>
+                <div class="form-group">
+                    <form action="#" class="contact" onsubmit="submission()">
+                        <div class="field-block">
+                    <label for="name" id="name"><strong>Name</strong></label>
+                    <input type="text" class="form-control" id="namef" name="name"><br>
+                    </div>
+                    <div class="field-block">
+                    <label for="email" id="email"><strong>Email</strong></label>
+                    <input type="email" class="form-control" id="email" name="email"><br>
+                    </div>
+                      <div class="field-block">
+                    <label for="phoneno" id="phoneno"><strong>Phone no</strong></label>
+                    <input type="text" class="form-control" id="phonenof" name="phoneno"><br>
+                    </div>
+                    <div  class="msg-field">
+                    <label for="message" id="message"><strong>Message</strong></label>
+                    <textarea name="messafe" id="message-box" cols="30" rows="2"></textarea><br>
+                    </div>
+                    <div id="sub-btn" class="field-block">
+                        <input type="submit" value="Send" id="btn-sub"><br>
+                    </div>
+                    </form>
+                </div>
+            </div>
+            <div class="info">
+            <h1>Info</h1>
+            <ul id="info-list">
+                <li><div id="enmail"><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmXBnHBPDmRKqlJJCNmpsgzpKWmWctFjtsRpRfzxRPhPmjVhrbkJMQbnkPMQsQxxcJNdnL"><img src="envelope_8.png" alt="" id="limg" width="50px" height="20px"> </a>&emsp;<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmXBnHBPDmRKqlJJCNmpsgzpKWmWctFjtsRpRfzxRPhPmjVhrbkJMQbnkPMQsQxxcJNdnL">info@getintouch.st</a></div></li>
+                <li>
+                <div id="dial">
+                    <img src="icons8-ringer-volume-50.png" width="30px" alt="">
+                <div id="phonenos">
+                    <p>01145589659</p>
+                    <p>035755589</p>   
+                </div>
+                </div>
+                </li>
+                <li> <img src="buildings.png" width="30px" height="30px" alt=""> <p id="strt">13,el-mosher st.,sidi gaber</p></li>
+                <li> <img src="clock.png" alt="" width="30px" height="30px" id="clock"><p id="clck">9:00 - 18:00</p></li>
+            </ul>
+            </div>
+            <div id="socials">
+               <div id="sch2"> <h2>Social Media</h2></div>
+               
+            <div class="card-body">
+            
+                <div class="social-media">
+                    <span class="fa-stack fa-sm" id="fb-span">
+                        <i class="fas fa-circle fa-stack-2x" id="face"></i>
+                        <i class="fab fa-facebook fa-stack-1x fa-inverse" id="face"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x" id="twit"></i>
+                        <i class="fab fa-twitter fa-stack-1x fa-inverse" id="twit"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x" id="inst"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse" id="inst"></i>
+                    </span>
+                    <span class="fa-stack fa-sm">
+                        <i class="fas fa-circle fa-stack-2x" id="what"></i>
+                        <i class="fab fa-whatsapp fa-stack-1x fa-inverse" id="what"></i>
+                    </span>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
 
        <footer class="mt-5 py-5">
     
@@ -221,7 +227,14 @@
         </div>
         
     </footer>
-        
+        <script>
+            function submission(){
+                var p = document.getElementById('submission');
+                p.innerHTML='Thank you for submitting';
+                p.style.color = 'red';
+                alert('thanks for submitting');
+            }
+        </script>
 
 
         
