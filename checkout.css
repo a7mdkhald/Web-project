@@ -1,0 +1,181 @@
+body{
+    background-image: url(https://img.freepik.com/premium-photo/gray-calathea-lutea-leaf-patterned-background_53876-149681.jpg?w=2000);
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+#content{
+    position: relative;
+    height: 1500px;
+
+}
+#info{
+    background-color: rgb(216, 241, 244);
+    position: relative; left: 150px; top: 100px;
+    height: 700px;
+    width: 1200px;
+    
+}
+h4{
+    color: white;
+    position: relative; left: 60px; top: 35px;
+}
+#edit{
+    position: relative; left: 300px;
+    background-color: transparent;
+    border: 0px;
+    color: rgba(255, 255, 255, 0.784);
+    cursor: pointer;
+}
+#edit:hover{
+    color: black;
+}
+#libr{
+    background-color: white;
+    height: 5px;
+    width: 300px;
+    position: relative; top: 20px; left: 50px;
+}
+#selhr{
+    background-color: white;
+    height: 5px;
+    width: 780px;
+    position: relative; left: 50px;
+}
+#consel{
+    background-color: #4B56D2;
+    height: 5px;
+    width: 216px;
+    position: relative; bottom: 5px;
+    z-index: 1;
+    display: block;
+
+}
+#addsel{
+        background-color: #4B56D2;
+    height: 5px;
+    width: 220px;
+    margin: 0%;
+    position: relative; bottom: 10px; left: 216px;
+    z-index: 1;
+    display: none;
+}
+#paysel{
+    
+        background-color: #4B56D2;
+    height: 5px;
+    width: 220px;
+    position: relative; bottom: 5px; left: 435px;
+    z-index: 1;
+    display: none;
+}
+
+#summary{
+    background-color: #4B56D2;
+    position: absolute;
+    left: 1000px;
+    top: 80px;
+    height: 680px;
+    width: 400px;
+    border: 1rem;
+    border-color: rgb(241, 209, 209);
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+}
+#conb{
+height: 50px;
+width: 221px;
+margin-right: 0px;
+background-color: transparent;
+border: 0px;
+}
+#add{
+    cursor: pointer;
+height: 50px;
+width: 221px;
+position: relative;right:10px;
+margin-left: 0px;
+background-color: transparent;
+border: 0px;
+color: gray;
+z-index: 1;
+}
+
+#pay{
+    height: 50px;
+    width: 221px;
+    position: relative;right: 20px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: gray;
+}
+#confirmb{
+    height: 50px;
+    width: 221px;
+    position: relative;right: 25px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+    color: gray;
+}#confirm{
+        background-color: #4B56D2;
+    height: 5px;
+    width: 220px;
+    position: relative; bottom: 10px; left: 650px;
+    z-index: 1;
+    display: none;
+}
+#cid{
+    position: relative; left: 200px; top: 50px;
+}
+#sad{
+    position: relative; left: 200px; top: 50px;
+    display: none;
+}#country{
+    width: 185px;
+    position: relative;left: 110px;
+}#gov{
+    position: relative; left:75px;
+
+}
+#email{
+    position: relative; left:124px;
+}
+#fname{
+    position: relative; left:90px;
+}#pincode{
+    position: relative; left:102px;
+
+}#strname{
+    position: relative; left:75px;
+
+}#bfapt{
+    position: relative; left:20px;
+
+}
+#lname{
+    position: relative; left:92px;
+}
+#phno{
+    position: relative; left:96px;
+}
+#mobno{
+    position: relative; left:91px;
+}#next{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    left: 350px;
+    top:30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}#next:hover{
+    background-color: #FFE15D;
+}
