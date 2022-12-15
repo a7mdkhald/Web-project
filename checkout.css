@@ -68,8 +68,58 @@ h4{
     position: relative; bottom: 5px; left: 435px;
     z-index: 1;
     display: none;
-}
+}   
+#pmd{
+    display: none;
+    position: relative; left: 150px;
 
+}#mcard{
+    padding: 0%;
+    border: 0px;
+    position: relative; top: 5px; left: 300px;
+}
+#crdt{
+    border: 1px solid ;
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+    height: 200px;
+}#vcard{
+    border: 0px;
+    position: relative;top: 5px; left: 300px;
+}#crdform{
+    display: none;
+    position: relative; bottom: 250px; left: 200px;
+}#coi{
+    position: relative; bottom: 2;
+    color: gray;
+}#nextc{
+      width: 100px;
+    height: 50px;
+    position: relative;
+    left: 400px;
+    top:30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+img{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+#aex{
+    border: 0px;
+    position: relative; top: 5px; left: 300px;
+}
 #summary{
     background-color: #4B56D2;
     position: absolute;
@@ -112,6 +162,30 @@ z-index: 1;
     border: 0px;
     cursor: pointer;
     color: gray;
+}.crdt{
+    position: relative; top: 10px;
+}#coddiv{
+    border: 1px solid;
+    border-radius: 10px;
+    width: 600px;
+    position: relative; top: 20px;
+    height: 100px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+hr{
+    border :1px dashed;
+}#ci{
+    color: gray;
+    position: relative; top: 5px; left:20px;
+}#exl{
+    position: relative; bottom: 30px; left: 10px;
+}#expd{
+    position: relative; right: 80px;;
+}#cvv{
+    position: relative; right: 80px;;
 }
 #confirmb{
     height: 50px;
@@ -121,7 +195,7 @@ z-index: 1;
     border: 0px;
     cursor: pointer;
     color: gray;
-}#confirm{
+}#confirmsel{
         background-color: #4B56D2;
     height: 5px;
     width: 220px;
