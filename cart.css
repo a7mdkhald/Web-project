@@ -17,6 +17,17 @@ body{
     height: 100px;
     border-radius: 100px;
     object-fit: cover;
+  }h5{
+    position: relative; right: 12px;
+  }#shp{
+    position: relative; right: 20px;
+  }#tot{
+    position: relative; left: 50px;
+  }#chkbtn{
+    position: relative; right:150px; top: 50px;
+    height: 20px;
+    width: 100px;
+    background-color: #000000;
   }
 #cart-container table{
     position: relative;
