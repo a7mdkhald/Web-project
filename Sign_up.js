@@ -31,7 +31,7 @@ document.forms[0].onsubmit = function(e){
    let password2valid = false; 
 
    
-    if (Username.value !== "" && Username.value.length <=10 ){
+    if (Username.value !== "" && Username.value.length <=12 ){
         uservalid = true;
         document.getElementById("V10").style.display = "none";
         d2.style.borderColor = "#00FF00";
@@ -84,7 +84,7 @@ document.forms[0].onsubmit = function(e){
         document.getElementById("V14").style.display = "block";
         d6.style.borderColor = "#FF0000";
     }
-    if (Userpass2.value !== "" && Userpass2.value.length <10 && Userpass2.value === Userpass.value ){
+    if (Userpass2.value !== ""  && Userpass2.value === Userpass.value ){
         password2valid = true;
         document.getElementById("V15").style.display = "none";
         d7.style.borderColor = "#00FF00";
