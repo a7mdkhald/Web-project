@@ -6,7 +6,7 @@ function toadd() {
 function topay() { 
     return dispp();
 }
-function toconfirm() {
+function tocon() {
     return dispco();
 }
 
@@ -55,6 +55,11 @@ function dispdiva() {
        let adseladj = document.getElementById('paysel');
         if (adseladj.style.display == 'block') {
             adseladj.style.bottom = "10px";
+    }
+    
+        let cosel = document.getElementById('confirmsel');
+        if (cosel.style.display == 'block') {
+            cosel.style.bottom = "10px";
         }
 }
 function dispdivar() {
@@ -69,6 +74,11 @@ function dispdivar() {
        let adseladj = document.getElementById('paysel');
         if (adseladj.style.display == 'block') {
             adseladj.style.bottom = "5px";
+    }
+    
+        let cosel = document.getElementById('confirmsel');
+        if (cosel.style.display == 'block') {
+            cosel.style.bottom = "5px";
         }
 }
 function dispa() {
@@ -79,21 +89,27 @@ function dispa() {
     let pays = document.getElementById('paysel');
     let ads = document.getElementById('addsel');
     let crd = document.getElementById('crdform');
+    let cosel = document.getElementById('confirmsel');
+        let confirm = document.getElementById('confirmation');
+    confirm.style.display = 'none';
     addiv.style.display = 'block';
     cdiv.style.display = 'none';
     crd.style.display = 'none';
     cons.style.display = 'none';
     pays.style.display = 'none';
     pdiv.style.display = 'none';
+    cosel.style.display = 'none';
     ads.style.display = 'block';
     ads.style.bottom = "5px";
     flag = 2;
     let bb = document.getElementById('add');
     let b1 = document.getElementById('conb');
     let b2 = document.getElementById('pay');
+    let b3 = document.getElementById('confirmb');
     bb.style.color = 'black';
     b1.style.color = 'gray';
     b2.style.color = 'gray';
+    b3.style.color = 'gray';
 }
 function dispc() {
     let addiv = document.getElementById('sad');
@@ -103,6 +119,10 @@ function dispc() {
     let pays = document.getElementById('paysel');
     let ads = document.getElementById('addsel');
     let crd = document.getElementById('crdform');
+    let cosel = document.getElementById('confirmsel');
+        let confirm = document.getElementById('confirmation');
+    confirm.style.display = 'none';
+    cosel.style.display = 'none';
     addiv.style.display = 'none';
     cdiv.style.display = 'block';
     cons.style.display = 'block';
@@ -115,9 +135,12 @@ function dispc() {
     let bb = document.getElementById('conb');
     let b1 = document.getElementById('add');
     let b2 = document.getElementById('pay');
+    let b3 = document.getElementById('confirmb');
     bb.style.color = 'black';
     b1.style.color = 'gray';
     b2.style.color = 'gray';
+     b3.style.color = 'gray';
+
     flag = 1;
 }
 function dispco() {
@@ -129,6 +152,7 @@ function dispco() {
     let ads = document.getElementById('addsel');
     let crd = document.getElementById('crdform');
     let conf = document.getElementById('confirmsel');
+    let confirm = document.getElementById('confirmation');
     conf.style.display = 'block';
     conf.style.bottom= "5px";
     addiv.style.display = 'none';
@@ -138,6 +162,7 @@ function dispco() {
     pays.style.display = 'none';
     pdiv.style.display = 'none';
     ads.style.display = 'none';
+    confirm.style.display = 'block';
     ads.style.bottom = "5px";
     pays.style.bottom = "50px";
 
@@ -164,11 +189,11 @@ function dispdivco() {
         conselector.style.display = 'block';
         let adseladj = document.getElementById('addsel');
         if (adseladj.style.display == 'block') {
-            adseladj.style.bottom = "10px";
+            adseladj.style.bottom = "5px";
         }
          let py = document.getElementById('paysel');
         if (py.style.display == 'block') {
-            py.style.bottom = "10px";
+            py.style.bottom = "5px";
         }
     }
 }
@@ -187,7 +212,7 @@ function dispdivcor() {
     }
      let py = document.getElementById('paysel');
         if (py.style.display == 'block') {
-            py.style.bottom = "10px";
+            py.style.bottom = "5px";
         }
         
 }
@@ -209,6 +234,10 @@ function dispdivc() {
         if (py.style.display == 'block') {
             py.style.bottom = "10px";
         }
+        let cosel = document.getElementById('confirmsel');
+        if (cosel.style.display == 'block') {
+            cosel.style.bottom = "10px";
+        }
     }
 }
 function dispdivcr() {
@@ -229,6 +258,10 @@ function dispdivcr() {
             py.style.bottom = "5px";
         }
         
+        let cosel = document.getElementById('confirmsel');
+        if (cosel.style.display == 'block') {
+            cosel.style.bottom = "5px";
+        }
 }
 function dispp() {
     let addiv = document.getElementById('sad');
@@ -239,8 +272,11 @@ function dispp() {
     let ads = document.getElementById('addsel');
     let crd = document.getElementById('crdform');
     let conf = document.getElementById('confirmsel');
+    let confirm = document.getElementById('confirmation');
+    confirm.style.display = 'none';
     addiv.style.display = 'none';
     crd.style.display = 'block';
+    conf.style.display = 'none';
     cdiv.style.display = 'none';
     cons.style.display = 'none';
     pays.style.display = 'block';
@@ -252,9 +288,11 @@ function dispp() {
     let bb = document.getElementById('pay');
     let b1 = document.getElementById('conb');
     let b2 = document.getElementById('add');
+    let b3 = document.getElementById('confirmb');
     bb.style.color = 'black';
     b1.style.color = 'gray';
     b2.style.color = 'gray';
+    b3.style.color = 'gray';
 }
 function dispdivp() {
     let bb = document.getElementById('pay');
@@ -270,6 +308,11 @@ function dispdivp() {
         let adseladj = document.getElementById('confirm');
         if (adseladj.style.display == 'block') {
             adseladj.style.bottom = "10px";
+        }
+        
+        let cosel = document.getElementById('confirmsel');
+        if (cosel.style.display == 'block') {
+            cosel.style.bottom = "15px";
         }
     }
 }

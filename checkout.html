@@ -371,7 +371,7 @@
                         <label for="paym" onclick="enform()"><h5>COD</h5></label><br>
                         <p id="coi">You can pay for Cash on Delivery orders using cash at the time of delivery</p>
                     </div>
-                    <input type="button" name="Next" id="nextc" value="Next" onclick="topay()">
+                    <input type="button" name="Next" id="nextc" value="Next" onclick="tocon()">
                     </form>
                 </div>
                 <div id="crdform" >
@@ -385,11 +385,61 @@
                     <label id="cvv" for="cvv">CVV</label>
                     <input disabled type="text" name="cvv" id="cvv" placeholder="000" size="3">
                 </div>
+                <div id="confirmation">
+                    <p><span class="head">Full Name:</span> fares kataya</p>
+                    <br>
+                    <p><span class="head">E-mail:</span> farestyk@gmail.com</p>
+                    <br>
+                    <p><span class="head">Phone Number:</span> 01145589659</p>
+                    <br>
+                    <p><span class="head">Mobile Number:</span> 035755589</p>
+                    <br>
+                    <p><span class="head">Full Address:</span> egypt/alexandria/riad.st/floor 10/apt 19</p>
+                    <br>
+                    <p><span class="head">Payment Method:</span> Cash On Delivery</p>
+                    <br>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
             </div>
             <div id="summary">
                 <h4>order summary</h4>
-                <button id="edit">Edit</button>
-            <div id="libr"></div>
+                <button id="edit"><a href="cart.html">Edit</a></button>
+            <div id="libr">
+                <h4 id="it">items</h4>
+                <div id="ite">
+                <p class="it">1x shirt</p>
+                <p class="it">1x pants</p>
+                <p class="it">1x laklok</p>
+                </div>
+                <div id="price">
+                    <p class="price">200EGP</p>
+                    <p class="price">200EGP</p>
+                    <p class="price">200EGP</p>
+                </div>
+                 <div id="det">
+                <p class="it">Subtotal</p>
+                <p class="it">Taxes & Fees</p>
+                <p class="it">Shipping</p>
+                <p class="it">Discount</p>
+                </div>
+                <hr>
+                <div id="price2">
+                    <p class="price">200EGP</p>
+                    <p class="price">200EGP</p>
+                    <p class="price">200EGP</p>
+                    <p class="price">200EGP</p>
+                </div>
+                <div id="subsec">
+                    <h4>Total: <h3>1200EGP</h3></h4>
+                </div>
+                <form action="">
+                    <input type="text" id="disc" name="disc" placeholder="Enter Discount Code">
+                    <input type="submit" name="apply" id="apply" value="apply" >
+                </form>
+                <button id="place">Place Your Order</button>
+            </div>
             </div>
           </section>
 
