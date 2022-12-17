@@ -9,6 +9,19 @@ display: inline;
 #contact-us > h1{
     width: 200px;
     margin: 20px;
+}#V10{
+    position: relative; top: 180px; left: 250px;
+    color: red;
+    display: none;
+}#v11{
+    position: relative; top: 210px; left: 250px;
+    color: red;
+    display: none;
+}#v12{
+
+    position: relative; top: 230px; left: 250px;
+    color: red;
+    display: none;
 }
 #contact-us{
     margin-left: 200px;

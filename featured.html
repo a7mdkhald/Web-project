@@ -69,10 +69,10 @@
     <h4>gender <button id="ard-btn" onclick="show1()"><i class="arrow down"></i></button></h4>
     <div class="gen-li">
     <ul class="filter-list">
-        <li><input type="checkbox" name="men" id="mencheck"><label for="mencheck">Men</label></li>
-        <li><input type="checkbox" name="women" id="womencheck"><label for="womencheck">Women</label></li>
-        <li><input type="checkbox" name="boys" id="boyscheck"><label for="boyscheck">Boys</label></li>
-        <li><input type="checkbox" name="girls" id="girlscheck"><label for="girlscheck">Girls</label></li>
+        <li><input type="checkbox" name="men" id="mencheck"  onclick="filter()"><label for="mencheck"  onclick="filter()">Men</label></li>
+        <li><input type="checkbox" name="women" id="womencheck" onclick="filter()"><label for="womencheck" onclick="filter()">Women</label></li>
+        <li><input type="checkbox" name="boys" id="boyscheck"   onclick="filter()" ><label for="boyscheck" onclick="filter()" >Boys</label></li>
+        <li><input type="checkbox" name="girls" id="girlscheck" onclick="filter()" ><label for="girlscheck" onclick="filter()">Girls</label></li>
     </ul>
     </div>
     
@@ -81,6 +81,7 @@
     <ul class="filter-list">
         <li><input type="checkbox" name="tops" id="topcheck"><label for="topcheck">Tops</label></li> 
         <li><input type="checkbox" name="bottoms" id="bottomcheck"><label for="bottomcheck">Bottoms</label></li>
+        <li><input type="checkbox" name="legwear" id="legcheck"><label for="legcheck">Legwear</label></li>
         <li><input type="checkbox" name="accessories" id="acccheck"><label for="acccheck">Accessories</label></li>
     </ul>
     </div>
@@ -160,6 +161,7 @@
       
 
       <div id="pr3" class="prod" >
+        <div id="legwear" class="girls">
         <div class="link"><img src="lklok.webp"  alt="" height="227px" width="200px">
         <div class="inf"><h2>Shoe</h2>
         <h2>50.00$</h2>
@@ -181,12 +183,13 @@
           </div>
         </div>
       </div>   
-  
+      </div>
       </div>
 
 
 
       <div id="pr4" class="prod" >
+        <div id="set" class="boys">
         <div class="link"><img src="Kid1.jpg"  alt="" height="227px" width="200px">
         <div class="inf"><h2>boy set</h2>
         <h2>200.00$</h2>
@@ -207,11 +210,13 @@
         
             </div>
             </div>
+            </div>
             </div>   
             </div>
 
 
             <div id="pr5" class="prod" >
+              <div id="legwear" class="girls">
               <div class="link"><img src="shoe.jpg"  alt="" height="227px" width="200px">
               <div class="inf"><h2>Red Shoe</h2>
               <h2>50.00$</h2>
@@ -232,6 +237,7 @@
               
                   </div>
                 </div>
+               </div>
                </div>   
               </div>
       
@@ -241,6 +247,7 @@
 
 
           <div id="pr6" class="prod" >
+            <div id="legwear" class="boys">
             <div class="link"><img src="shoe2.jpg"  alt="" height="227px" width="200px">
             <div class="inf"><h2>blue Shoe</h2>
             <h2>60.00$</h2>
@@ -261,12 +268,14 @@
             
                 </div>
                 </div>
+                </div>
                 </div>   
                 </div>
     
 
 
                 <div id="pr7" class="prod" >
+                  <div id="top" class="women">
                   <div class="link"><img src="Blouse.jpg"  alt="" height="227px" width="200px">
                   <div class="inf"><h2>Blouse</h2>
                   <h2>50.00$</h2>
@@ -287,12 +296,14 @@
                   
                       </div>
                       </div>
+                      </div>
                       </div>   
                       </div>
 
 
 
                       <div id="pr8" class="prod" >
+                        <div id="top" class="men">
                         <div class="link"><img src="short sleve shirt.jpg"  alt="" height="227px" width="200px">
                         <div class="inf"><h2>short sleve shirt</h2>
                         <h2>90.00$</h2>
@@ -313,6 +324,7 @@
                         
                             </div>
                             </div>
+                            </div>
                             </div>   
                             </div>
 
@@ -321,6 +333,7 @@
 
 
                             <div id="pr9" class="prod" >
+                              <div id="bottoms" class="women">
                               <div class="link"><img src="palaazo pants.webp"  alt="" height="227px" width="200px">
                               <div class="inf"><h2>Palazzo pants</h2>
                               <h2>110.00$</h2>
@@ -343,14 +356,16 @@
                                   </div>
                                   </div>   
                                   </div>
+                                  </div>
 
 
 
 
 
                                   <div id="pr10" class="prod" >
+                                    <div id="top" class="unisex">
                                     <div class="link"><img src="jacket.jpg"  alt="" height="227px" width="200px">
-                                    <div class="inf"><h2>Shoe</h2>
+                                    <div class="inf"><h2>yellow jacket</h2>
                                     <h2>70.00$</h2>
                                   </div>
                                     <div id="sec2">
@@ -370,6 +385,7 @@
                                         </div>
                                         </div>
                                         </div>   
+                                        </div>
                                         </div>
 
 

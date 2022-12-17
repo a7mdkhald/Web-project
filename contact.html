@@ -71,11 +71,15 @@
             <div class="cusservice">
             <div class="head"><h1 class="hedf">Contact Us</h1>
             <div id="parg"><p>Feel Free To Send Us Your Feedback,Suggestions Or Complaints</p></div></div>
+                    <p id="V10">*please enter a valid User name* </p>
+                    <p id="v11">*please enter a valid User Email* </p>
+                    <p id="v12">*please enter a valid phone number* </p>
                 <div class="form-group">
-                    <form action="#" class="contact" onsubmit="submission()">
+                    <form name="contactform" action="" class="contact" onsubmit="submission()">
                         <div class="field-block">
                     <label for="name" id="name"><strong>Name</strong></label>
-                    <input type="text" class="form-control" id="namef" name="name"><br>
+                    <input type="text" class="form-control" id="namef" name="name">                    
+                    <br>
                     </div>
                     <div class="field-block">
                     <label for="email" id="email"><strong>Email</strong></label>
@@ -87,10 +91,10 @@
                     </div>
                     <div  class="msg-field">
                     <label for="message" id="message"><strong>Message</strong></label>
-                    <textarea name="messafe" id="message-box" cols="30" rows="2"></textarea><br>
+                    <textarea name="message" id="message-box" cols="30" rows="2"></textarea><br>
                     </div>
                     <div id="sub-btn" class="field-block">
-                        <input type="submit" value="Send" id="btn-sub"><br>
+                        <input type="submit" value="Send" id="btn-sub" onclick="submission()"><br>
                     </div>
                     </form>
                 </div>
