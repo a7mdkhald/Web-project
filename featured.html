@@ -79,20 +79,20 @@
     <h4>type <button id="ard-btn" onclick="show2()"><i class="arrow down"></i></button></h4>
     <div class="type-li">
     <ul class="filter-list">
-        <li><input type="checkbox" name="tops" id="topcheck"><label for="topcheck">Tops</label></li> 
-        <li><input type="checkbox" name="bottoms" id="bottomcheck"><label for="bottomcheck">Bottoms</label></li>
-        <li><input type="checkbox" name="legwear" id="legcheck"><label for="legcheck">Legwear</label></li>
-        <li><input type="checkbox" name="accessories" id="acccheck"><label for="acccheck">Accessories</label></li>
+        <li><input type="checkbox" name="tops" id="topcheck" onclick="filter2()" ><label for="topcheck" onclick="filter2()" >Tops</label></li> 
+        <li><input type="checkbox" name="bottoms" id="bottomcheck" onclick="filter2()" ><label for="bottomcheck" onclick="filter2()" >Bottoms</label></li>
+        <li><input type="checkbox" name="legwear" id="legcheck" onclick="filter2()" ><label for="legcheck" onclick="filter2()" >Legwear</label></li>
+        <li><input type="checkbox" name="accessories" id="acccheck" onclick="filter2()" ><label for="acccheck" onclick="filter2()" >Accessories</label></li>
     </ul>
     </div>
     
     <h4>size <button id="ard-btn" onclick="show3()"><i class="arrow down"></i></button></h4>
     <div class="size-li">
     <ul class="filter-list">
-        <li><input type="checkbox" name="small" id="scheck"><label for="scheck">S</label></li>
-        <li><input type="checkbox" name="medium" id="mcheck"><label for="mcheck">M</label></li>
-        <li><input type="checkbox" name="large" id="lcheck"><label for="lcheck">L</label></li>
-        <li><input type="checkbox" name="xlarge" id="xlcheck"><label for="xlcheck">XL</label></li>
+        <li><input type="checkbox" name="small" id="scheck" onclick="filter3()"><label for="scheck" onclick="filter3()">S</label></li>
+        <li><input type="checkbox" name="medium" id="mcheck" onclick="filter3()"><label for="mcheck" onclick="filter3()">M</label></li>
+        <li><input type="checkbox" name="large" id="lcheck" onclick="filter3()"><label for="lcheck" onclick="filter3()">L</label></li>
+        <li><input type="checkbox" name="xlarge" id="xlcheck" onclick="filter3()"><label for="xlcheck" onclick="filter3()">XL</label></li>
     </ul>
     </div>
     <h4>price range <button id="ard-btn" onclick="show4()"><i class="arrow down"></i></button></h4>
@@ -104,9 +104,10 @@
   </div>
   <!-- -------------------------Products--------------------------------------------------------------------------------------- -->
   <section class="products" id="unfiltered">
-  <div id="Small-container">
+  
+    <div id="Small-container">
     <div id="pr1" class="prod" >
-      <div id="top" class="men">
+      <div id="top" class="men top s">
         <div class="link"><img src="shirt.jpg" alt=""  height="227px" width="200px">
         <div class="inf"><h2>black jacket</h2>
         <h2>50.00$</h2>
@@ -130,10 +131,12 @@
       </div>   
   </div>
       </div>
+      </div>
+
 
       
       <div id="pr2" class="prod" >
-      <div id="bottoms" class="women">
+      <div id="bottoms" class="women bottoms l">
         <div class="link"><img src="pants.jpg"  alt="" height="227px" width="200px">
         <div class="inf"><h2>Blue Pants</h2>
         <h2>50.00$</h2>
@@ -158,10 +161,11 @@
         </div>
       </div>
 
-      
 
+      
+      
       <div id="pr3" class="prod" >
-        <div  id="legwear"  class="girls">
+        <div  id="legwear"  class="girls legwear m">
         <div class="link"><img src="lklok.webp"  alt="" height="227px" width="200px">
         <div class="inf"><h2>Shoe</h2>
         <h2>50.00$</h2>
@@ -187,9 +191,9 @@
       </div>
 
 
-
+      
       <div id="pr4" class="prod" >
-        <div id="set" class="boys">
+        <div id="set" class="boys set s">
         <div class="link"><img src="Kid1.jpg"  alt="" height="227px" width="200px">
         <div class="inf"><h2>boy set</h2>
         <h2>200.00$</h2>
@@ -215,8 +219,9 @@
             </div>
 
 
+            
             <div id="pr5" class="prod" >
-              <div id="legwear" class="girls">
+              <div id="legwear" class="girls legwear m">
               <div class="link"><img src="shoe.jpg"  alt="" height="227px" width="200px">
               <div class="inf"><h2>Red Shoe</h2>
               <h2>50.00$</h2>
@@ -240,14 +245,15 @@
                </div>
                </div>   
               </div>
+              
       
           <br>
 
 
 
-
+          
           <div id="pr6" class="prod" >
-            <div id="legwear" class="boys">
+            <div id="legwear" class="boys legwear l">
             <div class="link"><img src="shoe2.jpg"  alt="" height="227px" width="200px">
             <div class="inf"><h2>blue Shoe</h2>
             <h2>60.00$</h2>
@@ -271,11 +277,12 @@
                 </div>
                 </div>   
                 </div>
+                
     
 
-
+                
                 <div id="pr7" class="prod" >
-                  <div id="top" class="women">
+                  <div id="top" class="women top m">
                   <div class="link"><img src="Blouse.jpg"  alt="" height="227px" width="200px">
                   <div class="inf"><h2>Blouse</h2>
                   <h2>50.00$</h2>
@@ -299,11 +306,12 @@
                       </div>
                       </div>   
                       </div>
+                      
 
 
-
+                      
                       <div id="pr8" class="prod" >
-                        <div id="top" class="men">
+                        <div id="top" class="men top m">
                         <div class="link"><img src="short sleve shirt.jpg"  alt="" height="227px" width="200px">
                         <div class="inf"><h2>short sleve shirt</h2>
                         <h2>90.00$</h2>
@@ -327,13 +335,14 @@
                             </div>
                             </div>   
                             </div>
+                            
 
 
 
 
-
+                            
                             <div id="pr9" class="prod" >
-                              <div id="bottoms" class="women">
+                              <div id="bottoms" class="women bottoms l">
                               <div class="link"><img src="palaazo pants.webp"  alt="" height="227px" width="200px">
                               <div class="inf"><h2>Palazzo pants</h2>
                               <h2>110.00$</h2>
@@ -357,13 +366,14 @@
                                   </div>   
                                   </div>
                                   </div>
+                                  
 
 
 
 
-
+                                  
                                   <div id="pr10" class="prod" >
-                                    <div  id="unisex" class="top">
+                                    <div  id="unisex" class="unisex m">
                                     <div class="link"><img src="jacket.jpg"  alt="" height="227px" width="200px">
                                     <div class="inf"><h2>yellow jacket</h2>
                                     <h2>70.00$</h2>
@@ -387,6 +397,7 @@
                                         </div>   
                                         </div>
                                         </div>
+                                        
 
 
 

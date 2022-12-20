@@ -213,26 +213,421 @@ function filter() {
         }
 
 }
-}
-function filter2() {
-    for (var i = 0; i < 10; i++) {
-        let tops = document.getElementsByClassName('top')[i];
-        let bottoms = document.getElementById('bottoms')[i];
+} function filter2() {
+    for (var i = 0; i < 20; i++) {
+        let top = document.getElementsByClassName('top')[i];
+        let bottoms = document.getElementsByClassName('bottoms')[i];
         let legwear = document.getElementsByClassName('legwear')[i];
-
+        let accessory = document.getElementsByClassName('accessory')[i];
+        let uni = document.getElementById('unisex');
+        let set = document.getElementById('set');
+        
         let topcheck = document.getElementById('topcheck');
         let bottomcheck = document.getElementById('bottomcheck');
         let legcheck = document.getElementById('legcheck');
-        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == false)  {
+        let acccheck = document.getElementById('acccheck');
+        if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == false && acccheck.checked == false) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
             top.style.display = 'block';
-            bottoms.style.display = 'none';
+            top.parentElement.style.display = 'block';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == false) {
             legwear.style.display = 'none';
             legwear.parentElement.style.display = 'none';
-            legwear.childElement
+            bottoms.style.display = 'none';
+            bottoms.parentElement.style.display = 'none';
+            top.style.display = 'block';
+            top.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
         }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == false) {
+            legwear.style.display = 'none';
+            legwear.parentElement.style.display = 'none';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            top.style.display = 'block';
+            top.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == true) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
+            bottoms.style.display = 'none';
+            bottoms.parentElement.style.display = 'none';
+            top.style.display = 'block';
+            top.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == true) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
+            top.style.display = 'block';
+            top.parentElement.style.display = 'block';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == false) {
+            legwear.style.display = 'none';
+            legwear.parentElement.style.display = 'none';
+            top.style.display = 'none';
+            top.parentElement.style.display = 'none';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            uni.style.display = 'none';
+            uni.parentElement.style.display = 'none';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == true) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
+            top.style.display = 'none';
+            top.parentElement.style.display = 'none';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            uni.style.display = 'none';
+            uni.parentElement.style.display = 'none';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == true) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
+            top.style.display = 'none';
+            top.parentElement.style.display = 'none';
+            bottoms.style.display = 'none';
+            bottoms.parentElement.style.display = 'none';
+            uni.style.display = 'none';
+            uni.parentElement.style.display = 'none';
+            set.style.display = 'none'
+            set.parentElement.style.display = 'none';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == true) {
+            legwear.style.display = 'block';
+            legwear.parentElement.style.display = 'block';
+            top.style.display = 'block';
+            top.parentElement.style.display = 'block';
+            bottoms.style.display = 'block';
+            bottoms.parentElement.style.display = 'block';
+            uni.style.display = 'block';
+            uni.parentElement.style.display = 'block';
+            set.style.display = 'block'
+            set.parentElement.style.display = 'block';
+        }
+    }
+}function filter3() {
+    for (var i = 0; i < 20; i++) {
+        let s = document.getElementsByClassName('s')[i];
+        let m = document.getElementsByClassName('m')[i];
+        let l = document.getElementsByClassName('l')[i];
+        let scheck = document.getElementById('scheck');
+        let mcheck = document.getElementById('mcheck');
+        let lcheck = document.getElementById('lcheck');
+        let xlcheck = document.getElementById('xlcheck');
+        if (scheck.checked == false && mcheck.checked == false && lcheck.checked == false && xlcheck.checked == false) {
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+                        document.getElementById('pr8').style.display = 'block';
+            document.getElementById('pr10').style.display = 'block';
+            }
+        if (scheck.checked == true && mcheck.checked == false && lcheck.checked == false) {
+            l.style.display = 'none';
+            l.parentElement.style.display = 'none';
+            m.style.display = 'none';
+            m.parentElement.style.display = 'none';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+            }
+        if (scheck.checked == true && mcheck.checked == true && lcheck.checked == false) {
+            l.style.display = 'none';
+            l.parentElement.style.display = 'none';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+            }
+        if (scheck.checked == true && mcheck.checked == false && lcheck.checked == true) {
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            m.style.display = 'none';
+            m.parentElement.style.display = 'none';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+            }
+        if (scheck.checked == true && mcheck.checked == true && lcheck.checked == true) {
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+                        document.getElementById('pr8').style.display = 'block';
+            document.getElementById('pr10').style.display = 'block';
+            }
+        if (scheck.checked == false && mcheck.checked == true && lcheck.checked == false) {
+            l.style.display = 'none';
+            l.parentElement.style.display = 'none';
+            s.style.display = 'none';
+            s.parentElement.style.display = 'none';
+            document.getElementById('pr8').style.display = 'none';
+            document.getElementById('pr10').style.display = 'none';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+            }
+        if (topcheck.checked == false && mcheck.checked == true && lcheck.checked == true) {
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            s.style.display = 'none';
+            s.parentElement.style.display = 'none';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+            }
+        if (scheck.checked == false && mcheck.checked == false && lcheck.checked == true) {
+            m.style.display = 'none';
+            m.parentElement.style.display = 'none';
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            s.style.display = 'none';
+            s.parentElement.style.display = 'none';
+                        document.getElementById('pr8').style.display = 'none';
+            document.getElementById('pr10').style.display = 'none';
+            }
+        if (scheck.checked == true && mcheck.checked == true && lcheck.checked == true && xlcheck.checked == true) {
+            l.style.display = 'block';
+            l.parentElement.style.display = 'block';
+            s.style.display = 'block';
+            s.parentElement.style.display = 'block';
+            m.style.display = 'block';
+            m.parentElement.style.display = 'block';
+            }
+    }
 }
+/*function filter2() {
+    
+    for (var i = 0; i < 20; i++) {
+        let tops = document.getElementsByClassName('top')[i];
+        let bottoms = document.getElementsByClassName('bottoms')[i];
+        let legwear = document.getElementsByClassName('legwear')[i];
+        let accessory = document.getElementsByClassName('accessories')[i];
+        let set = document.getElementsByClassName('set')[i];
+        let topcheck = document.getElementById('topcheck');
+        let bottomcheck = document.getElementById('bottomcheck');
+        let legcheck = document.getElementById('legcheck');
+        let acccheck = document.getElementById('acccheck');
+        if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == false && acccheck.checked == false) {
+            for (let j = 0; j < 10; j++){
+                bottoms.style.display = 'block';
+                legwear.style.display = 'block';
+                let leg = document.getElementsByClassName('legwear')[j +1];
+                let leg2 = document.getElementsByClassName('legwear')[j +2];
+                let bot = document.getElementsByClassName('bottoms')[j + 1];
+                bot.style.display = 'block';
+                leg.style.display = 'block';
+                leg2.style.display = 'block';
+                set.style.display = 'block';    
+             }
+            
+            tops.style.display = 'block';
+            accessory.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == false && acccheck.checked == false) {
+            for (let j = 0; j < 10; j++){
+                bottoms.style.display = 'none';
+                legwear.style.display = 'none';
+                let leg = document.getElementsByClassName('legwear')[j +1];
+                let leg2 = document.getElementsByClassName('legwear')[j +2];
+                let bot = document.getElementsByClassName('bottoms')[j + 1];
+                bot.style.display = 'none';
+                leg.style.display = 'none';
+                leg2.style.display = 'none';
+                
+             }
+            tops.style.display = 'block';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == false && acccheck.checked == false)  {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'none';
+            tops.style.display = 'block';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == true && acccheck.checked == false)  {
+            bottoms.style.display = 'none';
+            legwear.style.display = 'block';
+            tops.style.display = 'block';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == false && acccheck.checked == true)  {
+            bottoms.style.display = 'none';
+            legwear.style.display = 'none';
+            tops.style.display = 'block';
+            accessory.style.display = 'block';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == false) {
+for (let j = 0; j < 10; j++){
+                bottoms.style.display = 'block';
+                legwear.style.display = 'block';
+                let leg = document.getElementsByClassName('legwear')[j +1];
+                let leg2 = document.getElementsByClassName('legwear')[j +2];
+                let bot = document.getElementsByClassName('bottoms')[j + 1];
+                bot.style.display = 'block';
+                leg.style.display = 'block';
+                leg2.style.display = 'block';
+                
+             }
+            tops.style.display = 'block';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }   
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == false && acccheck.checked == false) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'none';
+            tops.style.display = 'none';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == false) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == false && acccheck.checked == true) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'none';
+            tops.style.display = 'none';
+            accessory.style.display = 'block';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == true) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'block';
+            set.style.display = 'block';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == true && acccheck.checked == false) {
+            set.style.display = 'none';
+            bottoms.style.display = 'none';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'none';
+        }
+        if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == true && acccheck.checked == true) {
+            set.style.display = 'none';
+            bottoms.style.display = 'none';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'block';
+        }if (topcheck.checked == true && bottomcheck.checked == false && legcheck.checked == true && acccheck.checked == false) {
+            bottoms.style.display = 'none';
+            legwear.style.display = 'block';
+            tops.style.display = 'block';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == false) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'none';
+            set.style.display = 'block';
+        }if (topcheck.checked == false && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == true) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'block';
+            set.style.display = 'block';
+        }if (topcheck.checked == false && bottomcheck.checked == false && legcheck.checked == true && acccheck.checked == false) {
+            bottoms.style.display = 'none';
+            legwear.style.display = 'block';
+            tops.style.display = 'none';
+            accessory.style.display = 'none';
+            set.style.display = 'none';
+        }
+        if (topcheck.checked == true && bottomcheck.checked == true && legcheck.checked == true && acccheck.checked == true) {
+            bottoms.style.display = 'block';
+            legwear.style.display = 'block';
+            tops.style.display = 'block';
+            accessory.style.display = 'block';
+            set.style.display = 'block';
+        }
+        
+}
+}
+*/
+/*function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+   for (i = 0; i < x.length; i++) {
+    RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+  }
 }
 
+// Show filtered elements
+function AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}*/
 function show2() {
         var list = document.getElementsByClassName('type-li')[0];
         if (list.style.display == 'block') {
