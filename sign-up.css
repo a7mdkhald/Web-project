@@ -28,18 +28,21 @@ body{
 }
 #d2{
     margin-top: 15px ;
+    margin-left: 5px;
 }
 #d3{
     margin-top: 15px ;
+    margin-left: 5px;
 }
 #d4{
     margin-top: 15px ;
+    margin-left: 4px;
 }
 #d5{
     margin-top: 15px ;
 }
 #d6{
-    margin-top: 15px ;
+    margin-top: 15px;
 }
 #d7{
     margin-top: 15px ;
@@ -102,7 +105,7 @@ body{
 } 
 #V10{
     margin-top: 20px;
-     display: none;
+    display: none;
     color: red;     
 }
 #f10 {
@@ -114,53 +117,53 @@ body{
 #V11{
     margin-top: 20px;
     display: none;
-   color: red;     
+    color: red;     
 }
 #f11 {
-   position: relative;
-   display: flex;
-   align-items:center;
-   margin-left: 567px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    margin-left: 567px;
 }#V12{
     margin-top: 20px;
     display: none;
-   color: red;     
+    color: red;     
 }
 #f12 {
-   position: relative;
-   display: flex;
-   align-items:center;
-   margin-left: 567px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    margin-left: 567px;
 }#V13{
     margin-top: 20px;
     display: none;
-   color: red;     
+    color: red;     
 }
 #f13 {
-   position: relative;
-   display: flex;
-   align-items:center;
-   margin-left: 567px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    margin-left: 567px;
 }#V14{
     margin-top: 20px;
     display: none;
-   color: red;     
+    color: red;     
 }
 #f14 {
-   position: relative;
-   display: flex;
-   align-items:center;
-   margin-left: 567px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    margin-left: 567px;
 }
 #V15{
     margin-top: 20px;
     display: none;
-   color: red;     
+    color: red;     
 }
 #f15 {
-   position: relative;
-   display: flex;
-   align-items:center;
-   margin-left: 567px;
+    position: relative;
+    display: flex;
+    align-items:center;
+    margin-left: 567px;
 }
 

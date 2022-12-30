@@ -1,22 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
+    <!-- CSS only -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css%22%3E">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css" />
-    <title>Contact</title>
-
-    <!-- Custom Css -->
-    <link rel="stylesheet" href="contact.css">
+    <title>Blog</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <meta charset="utf-8">
-
     <link rel="stylesheet" href="Header.css" />
-
 
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
@@ -33,16 +27,16 @@
 </head>
 
 <body>
-
-    <!-- Navbar top -->
-    <nav id="nav">
+    <section id="nav">
         <img id="img1" src="Title.webp" alt="Story_img">
         <div id="d1">
             <ul id="navbar">
-                <div id="srch-bar">
-                    <input id="bar" type="text" placeholder="search" />
-                    <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
-                </div>
+                <li>
+                    <div id="srch-bar">
+                        <input id="bar" type="text" placeholder="search" />
+                        <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
+                    </div>
+                </li>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="featured.php">Shopping</a>
                     <div id="sup-menu" class="dropdown">
@@ -69,97 +63,50 @@
         <li><a href="cart.php"><img id="img2" src="cart.webp" /></li></a>
         </ul>
         </div>
-    </nav>
-
-    <section id="content">
-        <div class="cusservice">
-            <div class="head">
-                <h1 class="hedf">Contact Us</h1>
-                <div id="parg">
-                    <p>Feel Free To Send Us Your Feedback,Suggestions Or Complaints</p>
+    </section>
+    <!-- End -->
+    <section id="blog">
+        <div>
+            <h1 id="hd1">Blogs</h1>
+        </div>
+        <div id="container">
+            <div class="row">
+                <div class="post">
+                    <div class="post-image">
+                        <img src="https://img.freepik.com/premium-photo/fashion-model-outdoor-portrait-tourist-woman-enjoying-sightseeing-lviv-girl-looking-ancient-atchitecture_106029-855.jpg?w=2000" width="500px">
+                    </div>
+                    <h3 id="hd3">New Summer Fashion 2022,<br> &nbsp;&nbsp;&nbsp; let's get a tour!</P>
+                    </h3>
+                    <p id="p1">September 9, 2022</p>
+                </div>
+                <div class="post">
+                    <div class="post-image">
+                        <img src="  Autumn-Fashion-696x469.jpeg" width="500px">
+                    </div>
+                    <h3 id="hd3">The best way to change the summer <br>
+                        <P id="p0">wardrobe into autumn wardrobe.</P>
+                    </h3>
+                    <p id="p1">Novamber 15, 2022</p>
+                </div>
+                <div class="post">
+                    <div class="post-image">
+                        <img src="https://media.istockphoto.com/id/1169378197/photo/stylish-shopaholic-with-purchases.jpg?s=612x612&w=0&k=20&c=RGwdnF0wrWV8NNBawXAbzAHUe8sMBpLsEvIICLR9dM4=" width="500px">
+                    </div>
+                    <h3 id="hd3">Best summer Offers for this year!</h3>
+                    <p id="p1">October 12, 2022</p>
+                </div>
+                <div class="post">
+                    <div class="post-image">
+                        <img src="https://cdn.luxe.digital/media/2019/09/12090415/business-casual-style-guide-men-luxe-digital.jpg" width="500px">
+                    </div>
+                    <h3 id="hd3">How to Dress casual for work </h3>
+                    <p id="p1">March 4, 2022</p>
                 </div>
             </div>
-            <p id="V10">*please enter a valid User name* </p>
-            <p id="v11">*please enter a valid User Email* </p>
-            <p id="v12">*please enter a valid phone number* </p>
-            <div class="form-group">
-                <form name="contactform" method="POST" action="" class="contact" onsubmit="submission()">
-                    <div class="field-block">
-                        <label for="name" id="name"><strong>Name</strong></label>
-                        <input type="text" class="form-control" id="namef" name="name">
-                        <br>
-                    </div>
-                    <div class="field-block">
-                        <label for="email" id="email"><strong>Email</strong></label>
-                        <input type="email" class="form-control" id="email" name="email"><br>
-                    </div>
-                    <div class="field-block">
-                        <label for="phoneno" id="phoneno"><strong>Phone no</strong></label>
-                        <input type="text" class="form-control" id="phonenof" name="phoneno"><br>
-                    </div>
-                    <div class="msg-field">
-                        <label for="message" id="message"><strong>Message</strong></label>
-                        <textarea name="message" id="message-box" cols="30" rows="2"></textarea><br>
-                    </div>
-                    <div id="sub-btn" class="field-block">
-                        <input type="submit" value="Send" id="btn-sub" onclick="submission()"><br>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="info">
-            <h1>Info</h1>
-            <ul id="info-list">
-                <li>
-                    <div id="enmail"><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmXBnHBPDmRKqlJJCNmpsgzpKWmWctFjtsRpRfzxRPhPmjVhrbkJMQbnkPMQsQxxcJNdnL" target="_blank"><img src="envelope_8.png" alt="" id="limg" width="50px" height="20px"> </a>&emsp;<a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSBmXBnHBPDmRKqlJJCNmpsgzpKWmWctFjtsRpRfzxRPhPmjVhrbkJMQbnkPMQsQxxcJNdnL" target="_blank">info@getintouch.st</a></div>
-                </li>
-                <li>
-                    <div id="dial">
-                        <img src="icons8-ringer-volume-50.png" width="30px" alt="">
-                        <div id="phonenos">
-                            <p>01145589659</p>
-                            <p>035755589</p>
-                        </div>
-                    </div>
-                </li>
-                <li> <img src="buildings.png" width="30px" height="30px" alt="">
-                    <p id="strt">13,el-mosher st.,sidi gaber</p>
-                </li>
-                <li> <img src="clock.png" alt="" width="30px" height="30px" id="clock">
-                    <p id="clck">9:00 - 18:00</p>
-                </li>
-            </ul>
-        </div>
-        <div id="socials">
-            <div id="sch2">
-                <h2>Social Media</h2>
-            </div>
 
-            <div class="card-body">
-
-                <div class="social-media">
-                    <span class="fa-stack fa-sm" id="fb-span">
-                        <i class="fas fa-circle fa-stack-2x" id="face"></i>
-                        <i class="fab fa-facebook fa-stack-1x fa-inverse" id="face"></i>
-                    </span>
-                    <span class="fa-stack fa-sm">
-                        <i class="fas fa-circle fa-stack-2x" id="twit"></i>
-                        <i class="fab fa-twitter fa-stack-1x fa-inverse" id="twit"></i>
-                    </span>
-                    <span class="fa-stack fa-sm">
-                        <i class="fas fa-circle fa-stack-2x" id="inst"></i>
-                        <i class="fab fa-instagram fa-stack-1x fa-inverse" id="inst"></i>
-                    </span>
-                    <span class="fa-stack fa-sm">
-                        <i class="fas fa-circle fa-stack-2x" id="what"></i>
-                        <i class="fab fa-whatsapp fa-stack-1x fa-inverse" id="what"></i>
-                    </span>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
-
+    <br>
     <footer class="mt-5 py-5">
 
         <div class="row container mx-auto pt-5">
@@ -247,22 +194,6 @@
         </div>
 
     </footer>
-
-    <?php
-
-    if ($_POST[''])
-
-
-    ?>
-    <script>
-        function submission() {
-            var p = document.getElementById('submission');
-            p.innerHTML = 'Thank you for submitting';
-            p.style.color = 'red';
-            alert('thanks for submitting');
-        }
-    </script>
-
 
 
 </body>
