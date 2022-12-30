@@ -102,7 +102,7 @@
                         <textarea name="message" id="message-box" cols="30" rows="2"></textarea><br>
                     </div>
                     <div id="sub-btn" class="field-block">
-                        <input type="submit" value="Send" id="btn-sub" onclick="submission()"><br>
+                        <input type="submit" name="b0" value="Send" id="btn-sub" onclick="submission()"><br>
                     </div>
                 </form>
             </div>
@@ -250,9 +250,30 @@
 
     <?php
 
-    if ($_POST[''])
+    if (isset($_POST['b0'])) {
 
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $phoneno = $_POST['phoneno'];
+        $message = $_POST['message'];
+    }
 
+    $conn = new mysqli("localhost", "root", "", "storey");
+
+    if (mysqli_connect_error())
+        die("cannot connect to database");
+
+    $query = "INSERT INTO `customer_service` (`name`,`email`,`phoneno`,`message`)
+    values ('$name','$email','$phoneno','$message')";
+
+    mysqli_query($conn, $query);
+
+    $query = "SELECT * from customer_service";
+    if ($result = mysqli_query($conn, $query)) {
+
+        $row = mysqli_fetch_array($result);
+    }
+    mysqli_close($conn);
     ?>
     <script>
         function submission() {
