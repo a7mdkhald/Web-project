@@ -18,7 +18,7 @@
     
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-      $(function(){
+    $(function(){
         $('a').each(function(){
             if ($(this).prop('href') == window.location.href) {
                 $(this).addClass('active'); $(this).parents('li').addClass('active');
@@ -34,7 +34,7 @@
     <section id="nav">
         <img id="img1" src="Title.webp" alt="Story_img">
         <div id="d1">
-          <ul id="navbar" >
+        <ul id="navbar" >
             <li>  <div id="srch-bar">
                     <input id="bar" type="text" placeholder="search" />
                     <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
@@ -42,29 +42,29 @@
             <li><a  href="home.html">Home</a></li>
             <li><a href="featured.html">Shopping</a>
             <div id="sup-menu" class="dropdown">
-              <ul>
+            <ul>
                 <li><a href="featured.html">featured</a></li>
                 <li><a href="categories.html">categories</a></li>
-              </ul>
-              </div>
-              </li></a>
+            </ul>
+            </div>
+            </li></a>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             
             
             
-            <li><a href="profile.html" ><img id="img2" src="user.png" />
-              <div id="sup-menu">
+            <li><a href="profile.php" ><img id="img2" src="user.png" />
+            <div id="sup-menu">
                 <ul>
-                  <li><a id="a2" href="register.html" >SignIn</li></a>
-                  <li><a id="a2" href="sign-up.html" >SignUp</li></a>
+                <li><a id="a2" href="register.php" >SignIn</li></a>
+                <li><a id="a2" href="sign-up.php" >SignUp</li></a>
                 </ul>
-              </div>
+            </div>
             </li></a>
             <li><a href="cart.html" ><img id="img2" src="cart.webp" /></li></a>
-          </ul>
+        </ul>
         </div>
-      </section>
+    </section>
     <!-- End -->
 
     </div>
@@ -102,7 +102,6 @@
                             <td>:</td>
                             <td>Web Developer</td>
                         </tr>
-          
                     </tbody>
                 </table>
             </div>
