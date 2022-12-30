@@ -1,8 +1,10 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css%22%3E">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Page</title>
@@ -14,57 +16,61 @@
     <link rel="stylesheet" href="footer.css" />
 
     <link rel="stylesheet" href="Header.css" />
-    
-    
+
+
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
-      $(function(){
-        $('a').each(function(){
-            if ($(this).prop('href') == window.location.href) {
-                $(this).addClass('active'); $(this).parents('li').addClass('active');
-            }
+        $(function() {
+            $('a').each(function() {
+                if ($(this).prop('href') == window.location.href) {
+                    $(this).addClass('active');
+                    $(this).parents('li').addClass('active');
+                }
+            });
         });
-        });
-</script>
-    
+    </script>
+
 </head>
+
 <body>
 
 
     <section id="nav">
         <img id="img1" src="Title.webp" alt="Story_img">
         <div id="d1">
-          <ul id="navbar" >
-            <li>  <div id="srch-bar">
-                    <input id="bar" type="text" placeholder="search" />
-                    <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
-                </div>
-            <li><a  href="home.html">Home</a></li>
-            <li><a href="featured.html">Shopping</a>
-            <div id="sup-menu" class="dropdown">
-              <ul>
-                <li><a href="featured.html">featured</a></li>
-                <li><a href="categories.html">categories</a></li>
-              </ul>
-              </div>
-              </li></a>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            
-            
-            
-            <li><a href="profile.html" ><img id="img2" src="user.png" />
-              <div id="sup-menu">
-                <ul>
-                  <li><a id="a2" href="register.html" >SignIn</li></a>
-                  <li><a id="a2" href="sign-up.html" >SignUp</li></a>
-                </ul>
-              </div>
-            </li></a>
-            <li><a href="cart.html" ><img id="img2" src="cart.webp" /></li></a>
-          </ul>
+            <ul id="navbar">
+                <li>
+                    <div id="srch-bar">
+                        <input id="bar" type="text" placeholder="search" />
+                        <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
+                    </div>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="featured.php">Shopping</a>
+                    <div id="sup-menu" class="dropdown">
+                        <ul>
+                            <li><a href="featured.php">featured</a></li>
+                            <li><a href="categories.php">categories</a></li>
+                        </ul>
+                    </div>
+                </li></a>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
+
+
+
+                <li><a href="profile.php"><img id="img2" src="user.png" />
+                        <div id="sup-menu">
+                            <ul>
+                                <li><a id="a2" href="register.php">SignIn</li>
+                    </a>
+                <li><a id="a2" href="sign-up.php">SignUp</li></a>
+            </ul>
         </div>
-      </section>
+        </li></a>
+        <li><a href="cart.php"><img id="img2" src="cart.webp" /></li></a>
+        </ul>
+        </div>
+    </section>
     <!-- End -->
 
     </div>
@@ -80,29 +86,23 @@
                         <tr>
                             <td>Name</td>
                             <td>:</td>
-                            <td>ImDezCode</td>
+                            <td><?php if (isset($_SESSION['username'])) echo $_SESSION['username'] ?></td>
                         </tr>
                         <tr>
                             <td>Email</td>
                             <td>:</td>
-                            <td>imdezcode@gmail.com</td>
+                            <td><?php if (isset($_SESSION['email'])) echo $_SESSION['email'] ?></td>
                         </tr>
                         <tr>
                             <td>Address</td>
                             <td>:</td>
-                            <td>Bali, Indonesia</td>
+                            <td><?php if (isset($_SESSION['address'])) echo $_SESSION['address'] ?></td>
                         </tr>
                         <tr>
                             <td>Phone Number</td>
                             <td>:</td>
-                            <td>0123456789</td>
+                            <td><?php if (isset($_SESSION['phonenumber'])) echo $_SESSION['phonenumber'] ?></td>
                         </tr>
-                        <tr>
-                            <td>Job</td>
-                            <td>:</td>
-                            <td>Web Developer</td>
-                        </tr>
-          
                     </tbody>
                 </table>
             </div>
@@ -148,7 +148,7 @@
     <!-- End -->
 
     <footer class="mt-5 py-5">
-    
+
         <div class="row container mx-auto pt-5">
             <div class="footer-one col-lg-3 col-md-6 col-12">
                 <img id="imga1" src="Title.webp" alt="Story_img" width="150px">
@@ -185,9 +185,9 @@
                 <h5 class="pb-2">instagram</h5>
                 <div class="row">
                     <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/b9/a9/a4/b9a9a4f3dab5cd9beb5d7c8d91b84445.jpg">
-                    <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/a9/03/49/a90349617102cf2d7fa7aa6f0515efed.jpg" >
-                    <img class="img-fluid w-25 h-100 m-2" src="https://images.squarespace-cdn.com/content/v1/547a3834e4b053a861c4874e/1624219205079-2MV5PECBTTNFHIIYC8SX/Sustainably+Chic+%7C+Sustainable+Fashion+Blog+%7C+Sustainable+and+Ethical+Clothing+Brands+for+Men.jpg?format=1000w" >
-                    <img class="img-fluid w-25 h-100 m-2" src="https://nextluxury.com/wp-content/uploads/fashion-mens-trendy-outfits.jpg" >
+                    <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/a9/03/49/a90349617102cf2d7fa7aa6f0515efed.jpg">
+                    <img class="img-fluid w-25 h-100 m-2" src="https://images.squarespace-cdn.com/content/v1/547a3834e4b053a861c4874e/1624219205079-2MV5PECBTTNFHIIYC8SX/Sustainably+Chic+%7C+Sustainable+Fashion+Blog+%7C+Sustainable+and+Ethical+Clothing+Brands+for+Men.jpg?format=1000w">
+                    <img class="img-fluid w-25 h-100 m-2" src="https://nextluxury.com/wp-content/uploads/fashion-mens-trendy-outfits.jpg">
                     <img class="img-fluid w-25 h-100 m-2" src="https://nextluxury.com/wp-content/uploads/mens-clothing-trendy-outfits-styles-navy-dress-shirt.jpg">
                 </div>
             </div>
@@ -232,7 +232,8 @@
                 </div>
             </div>
         </div>
-        
+
     </footer>
 </body>
+
 </html>

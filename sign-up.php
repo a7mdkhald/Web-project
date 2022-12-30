@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -42,17 +41,17 @@
                         <button type="button" id="srch" formaction="/submit"><img src="https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-21.png" alt="search" width="10px" height="10px"></button>
                     </div>
                 </li>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="featured.html">Shopping</a>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="featured.php">Shopping</a>
                     <div id="sup-menu" class="dropdown">
                         <ul>
-                            <li><a href="featured.html">featured</a></li>
-                            <li><a href="categories.html">categories</a></li>
+                            <li><a href="featured.php">featured</a></li>
+                            <li><a href="categories.php">categories</a></li>
                         </ul>
                     </div>
                 </li></a>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="contact.php">Contact</a></li>
 
 
 
@@ -65,7 +64,7 @@
             </ul>
         </div>
         </li></a>
-        <li><a href="cart.html"><img id="img2" src="cart.webp" /></li></a>
+        <li><a href="cart.php"><img id="img2" src="cart.webp" /></li></a>
         </ul>
         </div>
     </section>
@@ -111,7 +110,7 @@
             </div>
 
 
-            <button type="submit" class="Sign-up" id="b">Sign-up</button><br>
+            <button type="submit" name="b0" class="Sign-up" id="b">Sign-up</button><br>
             <a class="linkkk" href="register.php">Already Have an Account?</a>
 
     </form>
@@ -209,7 +208,7 @@
     <?php
     //echo $_post["username"];
 
-    if ($_POST) {
+    if (isset($_POST['b0'])) {
         $email = $_POST['email'];
         $username = $_POST['username'];
         $phonenumber = $_POST['number'];
@@ -227,11 +226,10 @@
 
         mysqli_query($conn, $query);
         $query = "SELECT * FROM users";
-
+        //header('location: home.html');
         if ($result = mysqli_query($conn, $query)) {
 
             $row = mysqli_fetch_array($result);
-            header('location: register.php');
         }
         mysqli_close($conn);
     }
@@ -239,19 +237,17 @@
 </body>
 
 </html>
-=======
-<?php 
-    echo $_post["username"];
-    $username = $_post["username"];
-    $email = $_post["email"];
-    $phonenumber = $_post["phonenumber"];
-    $password = $_post["password"];
-    $address = $_post["address"];
 
-    $conn = new mysqli("localhost","root","","users");
-    if(mysqli_connect_error()){
-        die("cannot connect th the database");
-    }
-    $query = "INSERT INTO 'users' ('username','email','phonenumber','password','address') 
+<!-- echo $_post["username"];
+$username = $_post["username"];
+$email = $_post["email"];
+$phonenumber = $_post["phonenumber"];
+$password = $_post["password"];
+$address = $_post["address"];
+
+$conn = new mysqli("localhost", "root", "", "users");
+if (mysqli_connect_error()) {
+    die("cannot connect th the database");
+}
+$query = "INSERT INTO 'users' ('username','email','phonenumber','password','address') 
     values ('$username','$email','$phonenumber','$password','$address')";
->>>>>>> 50a700640e5ca140f069a009f9cb42cde779c86a

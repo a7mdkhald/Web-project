@@ -1,22 +1,26 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html>
 
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css%22%3E">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Story online shop registeration</title>
-  <link rel="stylesheet" href="register.css" />
+  <title>Story online shop</title>
+  <link rel="stylesheet" href="home.css" />
   <link rel="stylesheet" href="normalize.css" />
+  <script type="text/javascript" src="Home.js"></script>
   <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="Header.css" />
+  <script type="text/javascript" src="Header.js"></script>
+  <meta charset="utf-8">
 
   <link rel="stylesheet" href="Header.css" />
 
-
+  <script src="shop.js"></script>
   <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script>
     $(function() {
@@ -30,8 +34,8 @@
   </script>
 </head>
 
-<body>
 
+<body>
   <section id="nav">
     <img id="img1" src="Title.webp" alt="Story_img">
     <div id="d1">
@@ -69,64 +73,95 @@
     </ul>
     </div>
   </section>
-  <form action="" method="POST" id="s2">
-    <div id="d3">
-      <h2 id="d4">Welcome To Story-eCommerce</h2>
-      <h3>Sign-in To Get Amazing Offers!</h3>
+
+
+  <section id="s2">
+    <!-- Slideshow container -->
+    <div id="d2">
+      <h5>trade-in-offer</h5>
+      <h3>Super value Deals<br /></h3>
+      <h4>On all our Products</h4>
+      <button id="b1"><a id="a1" href="featured.php">shop now!</a></button>
     </div>
-    <div id="f10">
-      <label id="l1" for="email">&nbsp;&nbsp;E-mail &nbsp; &nbsp;</label>
-      <input id="i1" name="email" type="email" class="email" placeholder="Email" /><br />
-      <p id="V10">*please enter a valid User Email* </p>
+    <div id="slideshow-container" class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <div id="mySlides" class="mySlides">
+        <!-- <div class="numbertext">1 / 3</div> -->
+        <img src="shirt.jpg" style="width: 100%" height="50%" />
+
+      </div>
+
+      <div id="mySlides" class="mySlides">
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <img src="jacket.jpg" style="width: 100%" height="50%" />
+
+      </div>
+      <div id="mySlides" class="mySlides">
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <img src="pants2.jpg" style="width: 100%" height="50%" />
+
+      </div>
+      <div id="mySlides" class="mySlides">
+        <!-- <div class="numbertext">2 / 3</div> -->
+        <img src="shoe2.jpg" style="width: 100%" height="50%" />
+
+      </div>
+
+      <div id="mySlides" class="mySlides">
+        <!-- <div class="numbertext">3 / 3</div> -->
+        <img src="palaazo pants.webp" style="width: 100%" height="50%" />
+
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <br />
 
-    <div id="f11">
-      <label id="l2" for="password">Password&nbsp;</label>
-      <input id="i2" name="password" type="password" class="password" placeholder="Password" min="6" max="20" /><br />
-      <p id="V11">*please enter a valid Password* </p>
+    <!-- The dots/circles -->
+    <div id="dot" style="text-align: center">
+      <span id="dot1" class="dot" onclick="currentSlide(1)"></span>
+      <span id="dot1" class="dot" onclick="currentSlide(2)"></span>
+      <span id="dot1" class="dot" onclick="currentSlide(3)"></span>
+      <span id="dot1" class="dot" onclick="currentSlide(4)"></span>
+      <span id="dot1" class="dot" onclick="currentSlide(5)"></span>
     </div>
+  </section>
 
-    <button id="b" name="bt0" type="submit" class="button">Log In Now</button>
+  <section>
+    <div id="sec2">
+      <div id="Small-container">
+        <div id="po">
+          <p id="p3">male</p>
+          <a href="featured.php"> <img id="img3" src="male.jpg" alt="male" height="350"></a>
+          <p id="p3">20% off</p>
 
-    <p id="p1"> Don't Have an Account? <a id="a1" href="sign-up.php">Sign-up Now!</a><br><br>
-      <?php
-
-      if (isset($_POST['bt0'])) {
-        $email = $_POST['email'];
-        $pass = $_POST['password'];
-
-        if ($email != "") {
-          $conn = mysqli_connect("localhost", "root", "", "storey");
-
-          if (mysqli_connect_error())
-            die("cannot connect to the database");
-
-          $query = "SELECT email , password , username , address , phonenumber FROM users where email = '$email' and password = '$pass'";
-          $rs = mysqli_query($conn, $query);
-          $nrows = mysqli_num_rows($rs);
-
-          if ($nrows > 0) {
-            $row = mysqli_fetch_assoc($rs);
-            $_SESSION['username'] = $row['username'];
-            $_SESSION['email'] = $row['email'];
-            $_SESSION['address'] = $row['address'];
-            $_SESSION['phonenumber'] = $row['phonenumber'];
+        </div>
+        <div id="po">
+          <p id="p3">female</p>
 
 
-            header('location: home.php');
-          } else {
-            echo "<p id='f0'>wrong email or password!</p>";
-          }
-          mysqli_close($conn);
-        } else {
-          echo "<p id='e1'>please enter your email!</p>";
-        }
-      }
-      ?>
-    </p>
+          <a href="featured.php"> <img id="img3" src="woman.jpg" alt="male" width="100%" height="350"></a>
+          <p id="p3">20% off</p>
 
-  </form>
-  <script type="text/javascript" src="sign_in.js"></script>
+
+        </div>
+        <div id="po">
+          <p id="p3">kids</p>
+
+
+          <a href="featured.php"> <img id="img3" src="kids.jpg" alt="male" height="350"></a>
+          <p id="p3">20% off</p>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
 
   <footer class="mt-5 py-5">
 
@@ -138,22 +173,22 @@
           Brands that use Shopify</p>
       </div>
       <div class="footer-one col-lg-3 col-md-6 col-12 mb-3">
-        <h5 class="pb-2">contact us</h5>
+        <h5 id="hh" class="pb-2">contact us</h5>
         <div>
-          <h6 class="text-uppercase">address</h6>
-          <p>123 STREET NAME, CITY, EG </p>
+          <h6 id="hhh" class="text-uppercase">address</h6>
+          <p id="pd1">123 STREET NAME, CITY, EG </p>
         </div>
         <div>
           <h6 class="text-uppercase">Phone</h6>
-          <p>(123) 456 789</p>
+          <p id="pd1">(123) 456 789</p>
         </div>
         <div>
           <h6 class="text-uppercase">Email</h6>
-          <p>MAIL@EXAMPLE.COM</p>
+          <p id="pd1">MAIL@EXAMPLE.COM</p>
         </div>
       </div>
       <div class="footer-one col-lg-3 col-md-6 col-12">
-        <h5 class="pb-2">Founders</h5>
+        <h5 id="hh" class="pb-2">Founders</h5>
         <div class="row">
           <ul>
             <li>Omar Hashim</li>
@@ -163,7 +198,7 @@
         </div>
       </div>
       <div class="footer-one col-lg-3 col-md-6 col-12">
-        <h5 class="pb-2">instagram</h5>
+        <h5 id="hh" class="pb-2">instagram</h5>
         <div class="row">
           <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/b9/a9/a4/b9a9a4f3dab5cd9beb5d7c8d91b84445.jpg">
           <img class="img-fluid w-25 h-100 m-2" src="https://i.pinimg.com/originals/a9/03/49/a90349617102cf2d7fa7aa6f0515efed.jpg">
@@ -179,7 +214,7 @@
           <img class="img-fluid w-50 h-125 m-2" src="https://i.ytimg.com/vi/i09C02151PI/maxresdefault.jpg">
         </div>
         <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
-          <p id="st1">story online shopping 2022. all right reserved</p>
+          <p id="pd1">story online shopping 2022. all right reserved</p>
         </div>
         <div class="col-lg-4 col-md-6 col-12">
           <span class="fa-stack fa-sm">
@@ -214,7 +249,6 @@
       </div>
     </div>
   </footer>
-
 
 </body>
 
