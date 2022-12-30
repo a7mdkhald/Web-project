@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2022 at 07:29 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 8.1.6
+-- Generation Time: Dec 30, 2022 at 10:14 AM
+-- Server version: 10.4.25-MariaDB
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,67 @@ SET time_zone = "+00:00";
 --
 -- Database: `storey`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `img_dir` varchar(255) NOT NULL,
+  `prodID` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `name`, `img_dir`, `prodID`) VALUES
+(1, 'black jacket', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\shirt.jpg', 1),
+(2, 'blue pants', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\pants.jpg', 2),
+(3, 'shoe', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\shoe.png', 3),
+(4, 'boy set', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\Kid1.jpg', 4),
+(5, 'red shoe', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\shoe.jpg', 5),
+(6, 'blue shoe', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\shoe2.jpg', 6),
+(7, 'blouse', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\Blouse.jpg', 7),
+(8, 'short sleeve shirt', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\short sleve shirt.jpg', 8),
+(9, 'palazzo pants', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\palazzo.png', 9),
+(10, 'yellow jacket', 'C:\\xampp\\htdocs\\GitHub\\Web-project\\images\\jacket.jpg', 10);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `prodID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `price` int(255) NOT NULL,
+  `stock` int(255) NOT NULL DEFAULT 1,
+  `gender` varchar(255) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `size` varchar(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`prodID`, `name`, `price`, `stock`, `gender`, `type`, `size`) VALUES
+(1, 'black jacket', 250, 200, 'men', 'top', 's'),
+(2, 'blue pants', 200, 74, 'women', 'bottom', 'l'),
+(3, 'shoe', 300, 100, 'girls', 'legwear', 'm'),
+(4, 'boyset', 400, 80, 'boys', 'set', 's'),
+(5, 'red shoe', 200, 52, 'girls', 'legwear', 'm'),
+(6, 'blue shoe', 250, 100, 'boys', 'legwear', 'l'),
+(7, 'blouse', 340, 20, 'women', 'top', 'm'),
+(8, 'short sleeve shirt', 280, 28, 'men', 'top', 's'),
+(9, 'palazoo pants', 400, 45, 'women', 'bottom', 'l'),
+(10, 'yellow jacket', 500, 67, 'uni', 'top', 's');
 
 -- --------------------------------------------------------
 
@@ -48,6 +109,49 @@ INSERT INTO `users` (`username`, `email`, `phonenumber`, `password`, `address`) 
 ('', '', 0, '', ''),
 ('fares', 'fares@gmail.com', 1016816273, '123456as', 'jdijdi'),
 ('hfufh', 'mmcks@klk.com', 1017216273, '123456as', 'fhfhufh');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id` (`prodID`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`prodID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `prodID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `images`
+--
+ALTER TABLE `images`
+  ADD CONSTRAINT `id` FOREIGN KEY (`prodID`) REFERENCES `products` (`prodID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
