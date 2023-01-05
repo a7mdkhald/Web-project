@@ -444,10 +444,13 @@ $prices = array();
                     ?>
                 </div>
                 
-                <div id="price">
-                    <p class="price">200EGP</p>
-                    <p class="price">200EGP</p>
-                    <p class="price">200EGP</p>
+                <div id="price"><?php
+                    for($i = 1; $i <= 10; $i++){
+                        if(isset($prices[$i])){
+                            echo'<p? style="color:white;">'.$prices[$i].'</p>';
+                        }
+                    }
+                    ?>
                 </div>
                 <div id="det">
                     <p class="it">Subtotal</p>

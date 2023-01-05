@@ -144,7 +144,7 @@ session_start();
     <?php
             if($tbset == 1){
                 echo '<form action="" method="post" position: relative; style="left: 500px;">
-                        <button type="submit" position: relative; style="left: 500px;"  name="clear" left>clear cart</button>
+                        <button type="submit" id="clear" position: relative; style="left: 500px;"  name="clear" left>clear cart</button>
                     </form>';
             }
             

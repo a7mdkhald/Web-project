@@ -182,7 +182,7 @@ $html->saveHTMLFile("foo.html");
           }
           ?>
           <form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr1"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr1" <?php if ($row[0][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           
@@ -197,7 +197,6 @@ $html->saveHTMLFile("foo.html");
                   echo '<button style="color: green; font-weight:bold">In Stock</button>';
                 }else{
                   echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
-
                 }
                 ?>
                
@@ -242,7 +241,7 @@ $html->saveHTMLFile("foo.html");
           }
           ?>
           <form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr2"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr2" <?php if ($row[1][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -297,7 +296,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr3"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr3" <?php if ($row[2][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -352,7 +351,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr4"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr4" <?php if ($row[3][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -405,7 +404,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr5"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr5" <?php if ($row[4][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -462,7 +461,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr6"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr6" <?php if ($row[5][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -516,7 +515,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr7"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr7"<?php if ($row[6][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -570,7 +569,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr8"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr8" <?php if ($row[7][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -626,7 +625,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr9"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr9" <?php if ($row[8][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>
@@ -682,7 +681,7 @@ $html->saveHTMLFile("foo.html");
             }
           }
           ?><form action="" method="post">
-            <button id="button1" type="submit" name="pr" value="pr10"> Add to cart
+            <button id="button1" type="submit" name="pr" value="pr10" <?php if ($row[9][3] <= 0){ ?> disabled <?php   } ?>> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
             </button>
           </form>

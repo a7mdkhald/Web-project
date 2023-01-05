@@ -30,6 +30,9 @@ body{
     background-color: #000000;
   }#clrbtn{
     
+  }#clear{
+    position: relative;
+    left: 50px;
   }
 #cart-container table{
     position: relative;
