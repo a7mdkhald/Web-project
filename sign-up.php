@@ -226,7 +226,7 @@
 
         mysqli_query($conn, $query);
         $query = "SELECT * FROM users";
-        //header('location: home.html');
+        //header('location: home.php');
         if ($result = mysqli_query($conn, $query)) {
 
             $row = mysqli_fetch_array($result);
