@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 
 <head>
@@ -411,16 +414,33 @@
                 <p></p>
             </div>
         </div>
+        <?php
+$names = array();
+$prices = array(); 
+        for ($i = 1; $i <= 10; $i++) {
+            $namstr = "name" . $i;
+            if (isset($_SESSION[$namstr])) {
+                $names[$i] = $_SESSION[$namstr];
+            }
+        }
+?>
         <div id="summary">
             <h4>order summary</h4>
             <button id="edit"><a href="cart.php">Edit</a></button>
             <div id="libr">
                 <h4 id="it">items</h4>
+                
                 <div id="ite">
-                    <p class="it">1x shirt</p>
-                    <p class="it">1x pants</p>
-                    <p class="it">1x laklok</p>
+                    
+                    <?php
+                    for($i = 1; $i <= 10; $i++){
+                        if(isset($names[$i])){
+                            echo'<p?>"'.$names[$i].'"</p>';
+                        }
+                    }
+                    ?>
                 </div>
+                
                 <div id="price">
                     <p class="price">200EGP</p>
                     <p class="price">200EGP</p>

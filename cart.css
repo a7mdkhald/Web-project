@@ -28,6 +28,8 @@ body{
     height: 20px;
     width: 100px;
     background-color: #000000;
+  }#clrbtn{
+    
   }
 #cart-container table{
     position: relative;

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +34,47 @@
 </head>
 
 <body>
+  <?php
+$conn = new mysqli("localhost", "root", "","storey");
+if(!$conn){
+  die("Couldn't connect to database: " . mysqli_connect_errno());
+}
+$query1 = "SELECT * FROM products";
+if ($result1 = mysqli_query($conn, $query1)){
+  $row = mysqli_fetch_all($result1);
+}
+$query2 = "SELECT * FROM images";
+if ($result2 = mysqli_query($conn, $query2)){
+  $img = mysqli_fetch_all($result2);
+}
+
+/*if ($result = mysqli_query($conn, $query)){
+  $row = mysqli_fetch_assoc($result);
+  $nrows = mysqli_num_rows($result);
+}$record = array(
+  'prodID'=>array(),
+  'name'=>array(),
+  'price'=>array(),
+  'stock'=>array(),
+  'gender'=>array(),
+  'type'=>array(),
+  'size'=>array(),
+);
+  for($i = 0; $i < $row[prodID];$i++){
+    $record[prodID] = $row[prodID][$i];
+  }
+  */
+//$doc = new DOMDocument();
+//$doc->loadHTML("featured.php");
+/*$doc = new DOMDocument();
+$doc->validateOnParse = true;
+$doc->loadHTMLFile('featured.php');
+//echo"the elemnt id tag is:".$doc->getElementById('name1')->tagName;
+/*$doc->getElementById('name1')->tagName; 
+$html->getElementById('name1')->nodeValue = 'New value';
+$html->saveHTMLFile("foo.html");
+*/
+?>
   <section id="nav">
     <img id="img1" src="Title.webp" alt="Story_img">
     <div id="d1">
@@ -112,23 +156,52 @@
     <div id="Small-container">
       <div id="pr1" class="prod">
         <div id="top" class="men top s">
-          <div class="link"><img src="shirt.jpg" alt="" height="227px" width="200px">
+          <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0]){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
             <div class="inf">
-              <h2>black jacket</h2>
-              <h2>50.00$</h2>
+              <h2 ><?php echo $row[0][1]?></h2>
+              <h2 ><?php echo $row[0][2].".00$"?></h2>
             </div>
             <div id="sec2">
 
               <div id="po">
-                <img id="img3" src="shirt.jpg" alt="male">
-                <button id="button1" type="submit"> Add to cart
+                <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0]){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
+          <form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr1"> Add to cart
                   <img id="img2" src="cart2.png" alt="cart">
-                </button>
+            </button>
+          
+                
+                
                 <button id="button2">
                   size
                   <input id="input" type="number"></td>
                 </button>
-                <button id="button3">inStock</button>
+                <?php
+                if($row[0][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
+               
+                
               </div>
 
 
@@ -142,24 +215,49 @@
 
     <div id="pr2" class="prod">
       <div id="bottoms" class="women bottoms l">
-        <div class="link"><img src="pants.jpg" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blue pants"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>Blue Pants</h2>
-            <h2>50.00$</h2>
+            <h2><?php echo $row[1][1]?></h2>
+            <h2><?php echo $row[1][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="pants.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blue pants"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
+          <form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr2"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[1][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -172,24 +270,50 @@
 
     <div id="pr3" class="prod">
       <div id="legwear" class="girls legwear m">
-        <div class="link"><img src="lklok.webp" alt="" height="227px" width="200px">
+        <div class="link">
+          <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>Shoe</h2>
-            <h2>50.00$</h2>
+            <h2><?php echo $row[2][1]?></h2>
+            <h2><?php echo $row[2][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="lklok.webp" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr3"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               </button>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[2][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -201,24 +325,49 @@
 
     <div id="pr4" class="prod">
       <div id="set" class="boys set s">
-        <div class="link"><img src="Kid1.jpg" alt="" height="227px" width="200px">
+        <div class="link">
+          <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "boy set"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>boy set</h2>
-            <h2>200.00$</h2>
+            <h2><?php echo $row[3][1]?></h2>
+            <h2><?php echo $row[3][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="Kid1.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "boy set"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr4"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[3][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -230,24 +379,48 @@
 
     <div id="pr5" class="prod">
       <div id="legwear" class="girls legwear m">
-        <div class="link"><img src="shoe.jpg" alt="" height="227px" width="200px">
+        <div class="link">  <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "red shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>Red Shoe</h2>
-            <h2>50.00$</h2>
+            <h2><?php echo $row[4][1]?></h2>
+            <h2><?php echo $row[4][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="shoe.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "red shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr5"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[4][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -263,24 +436,48 @@
 
     <div id="pr6" class="prod">
       <div id="legwear" class="boys legwear l">
-        <div class="link"><img src="shoe2.jpg" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blue shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>blue Shoe</h2>
-            <h2>60.00$</h2>
+            <h2><?php echo $row[5][1]?></h2>
+            <h2><?php echo $row[5][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="shoe2.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blue shoe"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr6"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[5][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -293,24 +490,48 @@
 
     <div id="pr7" class="prod">
       <div id="top" class="women top m">
-        <div class="link"><img src="Blouse.jpg" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blouse"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>Blouse</h2>
-            <h2>50.00$</h2>
+            <h2><?php echo $row[6][1]?></h2>
+            <h2><?php echo $row[6][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="Blouse.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "blouse"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr7"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[6][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -323,24 +544,48 @@
 
     <div id="pr8" class="prod">
       <div id="top" class="men top m">
-        <div class="link"><img src="short sleve shirt.jpg" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "short sleeve shirt"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>short sleve shirt</h2>
-            <h2>90.00$</h2>
+            <h2><?php echo $row[7][1]?></h2>
+            <h2><?php echo $row[7][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="short sleve shirt.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "short sleeve shirt"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr8"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[7][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -355,24 +600,48 @@
 
     <div id="pr9" class="prod">
       <div id="bottoms" class="women bottoms l">
-        <div class="link"><img src="palaazo pants.webp" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "palazoo pants"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>Palazzo pants</h2>
-            <h2>110.00$</h2>
+            <h2><?php echo $row[8][1]?></h2>
+            <h2><?php echo $row[8][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="palaazo pants.webp" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "palazoo pants"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr9"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[8][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -387,24 +656,48 @@
 
     <div id="pr10" class="prod">
       <div id="unisex" class="unisex m">
-        <div class="link"><img src="jacket.jpg" alt="" height="227px" width="200px">
+        <div class="link"><?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "yellow jacket"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?>
           <div class="inf">
-            <h2>yellow jacket</h2>
-            <h2>70.00$</h2>
+            <h2><?php echo $row[9][1]?></h2>
+            <h2><?php echo $row[9][2].".00$"?></h2>
           </div>
           <div id="sec2">
 
             <div id="po">
 
-              <img id="img3" src="jacket.jpg" alt="male">
-              <button id="button1" type="submit"> Add to cart
-                <img id="img2" src="cart2.png" alt="cart">
-              </button>
+              <?php
+          $count = count($img);
+          for($i=0; $i < $count; $i++){
+            if($img[$i][3] == $row[$i][0] && $row[$i][1] == "yellow jacket"){
+              echo '<img src="'.$img[$i][2].'" height="227px" width="200px"/>';
+              break;
+            }
+          }
+          ?><form action="" method="post">
+            <button id="button1" type="submit" name="pr" value="pr10"> Add to cart
+                  <img id="img2" src="cart2.png" alt="cart">
+            </button>
+          </form>
               <button id="button2">
                 size
                 <input id="input" type="number"></td>
               </button>
-              <button id="button3">inStock</button>
+              <?php
+                if($row[9][3] > 0){
+                  echo '<button style="color: green; font-weight:bold">In Stock</button>';
+                }else{
+                  echo '<button style="color: red; font-weight:bold">Out Of Stock</button>';
+
+                }
+                ?>
 
             </div>
           </div>
@@ -516,6 +809,52 @@
 
   </footer>
 
+  <?php
+  if (isset($_POST['pr']) && $_POST['pr'] == 'pr1') {
+    $_SESSION['name1'] = $row[0][1];
+    $_SESSION['price1'] = $row[0][2];
+    $_SESSION['image1'] = $img[0][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr2') {
+    $_SESSION['name2'] = $row[1][1];
+    $_SESSION['price2'] = $row[1][2];
+    $_SESSION['image2'] = $img[1][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr3') {
+    $_SESSION['name3'] = $row[2][1];
+    $_SESSION['price3'] = $row[2][2];
+    $_SESSION['image3'] = $img[2][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr4') {
+    $_SESSION['name4'] = $row[3][1];
+    $_SESSION['price4'] = $row[3][2];
+    $_SESSION['image4'] = $img[3][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr5') {
+    $_SESSION['name5'] = $row[4][1];
+    $_SESSION['price5'] = $row[4][2];
+    $_SESSION['image5'] = $img[4][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr6') {
+    $_SESSION['name6'] = $row[5][1];
+    $_SESSION['price6'] = $row[5][2];
+    $_SESSION['image6'] = $img[5][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr7') {
+    $_SESSION['name7'] = $row[6][1];
+    $_SESSION['price7'] = $row[6][2];
+    $_SESSION['image7'] = $img[6][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr8') {
+    $_SESSION['name8'] = $row[7][1];
+    $_SESSION['price8'] = $row[7][2];
+    $_SESSION['image8'] = $img[7][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr9') {
+    $_SESSION['name9'] = $row[8][1];
+    $_SESSION['price9'] = $row[8][2];
+    $_SESSION['image9'] = $img[8][2];
+  }elseif (isset($_POST['pr']) && $_POST['pr'] == 'pr10') {
+    $_SESSION['name10'] = $row[9][1];
+    $_SESSION['price10'] = $row[9][2];
+    $_SESSION['image10'] = $img[9][2];
+  }
+  ?>
+  
+
 </body>
+
 
 </html>

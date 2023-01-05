@@ -215,6 +215,7 @@ h4{
     margin-bottom: 275px;
     padding-left: -100px;
     text-align: left;
+    display: flex;
         
 }
 .link{

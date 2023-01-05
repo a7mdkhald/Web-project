@@ -426,6 +426,35 @@ function filter() {
             }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*function filter2() {
     
     for (var i = 0; i < 20; i++) {
