@@ -78,53 +78,52 @@ session_start();
         </div>
         <br>
         <br>
-                    
+
 
     </section>
     <section id="cart-container" class="cart-cortainer">
-                    
+
         <table width="80%">
             <thead>
-                    
+
 
                 <tr>
                     <td>Remove</td>
                     <td>Image</td>
                     <td>Product</td>
                     <td>Price</td>
-                    <td>Quantity</td>
                     <td>Total</td>
                 </tr>
             </thead>
-                    
+
             <tbody>
-                    
+
                 <?php
-                
+
                 global $tbset;
-                global $quantity;
+                //      global $quantity;
                 $totalsum = 0;
-                for ($i = 1; $i <= 10; $i++){
+                for ($i = 1; $i <= 10; $i++) {
                     //$quantity = 1;
                     $nmstr = "name" . $i;
                     $prstr = "price" . $i;
                     $imgstr = "image" . $i;
-                    if (!empty($_SESSION[$nmstr])){
-                        echo'<tr><td>
+                    if (!empty($_SESSION[$nmstr])) {
+                        echo '<tr><td>
                     <form action="" method="post">
-                        <button type="submit" name="del" value="'.$i.'" style="background-color: transparent; margin:5px; border: 0px;"><img src="trash.png" height="50px" alt=""></button>
+                        <button type="submit" name="del" value="' . $i . '" style="background-color: transparent; margin:5px; border: 0px;"><img src="trash.png" height="50px" alt=""></button>
                     </form>
-                    </td><td><img src"images/Blouse.jpg" alt="d" style"height: 200px;"></img>  </td><td>'.$_SESSION[$nmstr].'</td><td>'.$_SESSION[$prstr].'</td><td><form action="" method="post"><input type="number" name="no'.$i.'" id="input" width="20px"></form></td><td>  '.$_SESSION[$prstr] * ($quantity = $_POST['no' . $i]).'</td></tr>';
-                    $totalsum = $totalsum + $_SESSION[$prstr] * $quantity;             
+                    </td><td><img src="' . $_SESSION[$imgstr] . '" alt="d" style="height: 100px; width: 100px;"></img>  </td><td>' . $_SESSION[$nmstr] . '</td>
+                    <td>' . $_SESSION[$prstr] . '</td>
+                    <td>  ' . $_SESSION[$prstr] . '</td></tr>';
+                        $totalsum = $totalsum + $_SESSION[$prstr];
                         $tbset = 1;
-                        
-                }
-                    
+                    }
                 }
                 ?>
-                
+
                 <?php
-                
+
                 if (isset($_POST['del'])) {
                     $delstr = $_POST['del'];
                     unset($_SESSION['name' . $delstr]);
@@ -150,18 +149,18 @@ session_start();
     <br>
 
     <?php
-            if($tbset == 1){
-                echo '<form action="" method="post" position: relative; style="left: 500px;">
+    if ($tbset == 1) {
+        echo '<form action="" method="post" position: relative; style="left: 500px;">
                         <button type="submit" id="clear" position: relative; style="left: 1200px; width:80px; height:50px; color:white; background-color:black; "  name="clear" left>clear cart</button>
                     </form>';
-            }
-            
-           if (isset($_POST['clear'])){
+    }
+
+    if (isset($_POST['clear'])) {
         session_destroy();
-           }
-?>
+    }
+    ?>
     <br>
-    
+
     <section id="cart-bot" class="cart-container">
         <div class="row">
             <div id="Coupon" class="Coupon col-lg-6 col-mg-6 col-12">
@@ -175,17 +174,17 @@ session_start();
                 <div id="s2" class="d-flex justify-content-between">
                     <h6>Shipping </h6>
                     <p id="shp"><?php
-                    $ship = 200;
-                    $totalsum = $totalsum + $ship;
-                    echo "$".$ship.".00";
-                    ?></p>
+                                $ship = 200;
+                                $totalsum = $totalsum + $ship;
+                                echo "$" . $ship . ".00";
+                                ?></p>
                 </div>
                 <hr class="second-hr">
                 <div class="d-flex justify-content-between">
 
                     <div id="s2">
                         <h6>Total </h6>
-                        <p id="tot"><?php echo "$".$totalsum .".00" ?></p>
+                        <p id="tot"><?php echo "$" . $totalsum . ".00" ?></p>
                     </div>
                     <button id="chkbtn"><a href="checkout.php" style="color: white;"> Proceed to checkout </a></button>
                 </div>
