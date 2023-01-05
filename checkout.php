@@ -419,8 +419,11 @@ $names = array();
 $prices = array(); 
         for ($i = 1; $i <= 10; $i++) {
             $namstr = "name" . $i;
+            $pristr = "price" . $i;
             if (isset($_SESSION[$namstr])) {
                 $names[$i] = $_SESSION[$namstr];
+                $prices[$i] = $_SESSION[$pristr];
+
             }
         }
 ?>
@@ -429,13 +432,13 @@ $prices = array();
             <button id="edit"><a href="cart.php">Edit</a></button>
             <div id="libr">
                 <h4 id="it">items</h4>
-                
+                <br>
                 <div id="ite">
                     
                     <?php
                     for($i = 1; $i <= 10; $i++){
                         if(isset($names[$i])){
-                            echo'<p?>"'.$names[$i].'"</p>';
+                            echo'<p? style="color:white;">'.$names[$i].'&#9;'.$prices[$i].'</p>';
                         }
                     }
                     ?>
