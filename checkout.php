@@ -438,16 +438,18 @@ $prices = array();
                     <?php
                     for($i = 1; $i <= 10; $i++){
                         if(isset($names[$i])){
-                            echo'<p? style="color:white;">'.$names[$i].'&#9;'.$prices[$i].'</p>';
+                            echo'<p? style="color:white;">'.$names[$i].'</p>';
                         }
                     }
                     ?>
                 </div>
                 
                 <div id="price"><?php
+                $subtotal = 0;
                     for($i = 1; $i <= 10; $i++){
                         if(isset($prices[$i])){
-                            echo'<p? style="color:white;">'.$prices[$i].'</p>';
+                             echo'<p style="color:white; left:200px; top:43px;" >'.$prices[$i].'.00$</p>';
+                              $subtotal = $prices[$i] + $subtotal;
                         }
                     }
                     ?>

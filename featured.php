@@ -47,6 +47,10 @@ session_start();
   if ($result2 = mysqli_query($conn, $query2)) {
     $img = mysqli_fetch_all($result2);
   }
+  $query3 = "SELECT * FROM seller";
+  if ($result3 = mysqli_query($conn, $query3)) {
+    $seller = mysqli_fetch_all($result3);
+  }
 
   /*if ($result = mysqli_query($conn, $query)){
   $row = mysqli_fetch_assoc($result);
@@ -168,6 +172,7 @@ $html->saveHTMLFile("foo.html");
             <div class="inf">
               <h2><?php echo $row[0][1] ?></h2>
               <h2><?php echo $row[0][2] . ".00$" ?></h2>
+              <h2><?php echo "sold by ".$seller[0][2] ?></h2>
             </div>
             <div id="sec2">
 
@@ -226,9 +231,9 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[1][1] ?></h2>
             <h2><?php echo $row[1][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
-
             <div id="po">
 
               <?php
@@ -281,6 +286,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[2][1] ?></h2>
             <h2><?php echo $row[2][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -335,6 +341,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[3][1] ?></h2>
             <h2><?php echo $row[3][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -387,6 +394,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[4][1] ?></h2>
             <h2><?php echo $row[4][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -443,6 +451,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[5][1] ?></h2>
             <h2><?php echo $row[5][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -496,6 +505,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[6][1] ?></h2>
             <h2><?php echo $row[6][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -549,6 +559,8 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[7][1] ?></h2>
             <h2><?php echo $row[7][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
+
           </div>
           <div id="sec2">
 
@@ -604,6 +616,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[8][1] ?></h2>
             <h2><?php echo $row[8][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
@@ -659,6 +672,7 @@ $html->saveHTMLFile("foo.html");
           <div class="inf">
             <h2><?php echo $row[9][1] ?></h2>
             <h2><?php echo $row[9][2] . ".00$" ?></h2>
+            <h2><?php echo "sold by ".$seller[0][2] ?></h2>
           </div>
           <div id="sec2">
 
