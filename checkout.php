@@ -54,6 +54,11 @@ session_start();
         </ul>
         </div>
     </section>
+    <?php
+    if(isset($_SESSION['username'])){
+        $_POST['add'] = 1;
+    }
+    ?>
 
     <section id="content">
         <div id="info" onload="defaultl()">
@@ -444,12 +449,21 @@ $prices = array();
                     ?>
                 </div>
                 
+<<<<<<< Updated upstream
                 <div id="price"><?php
                 $subtotal = 0;
                     for($i = 1; $i <= 10; $i++){
                         if(isset($prices[$i])){
                              echo'<p style="color:white; left:200px; top:43px;" >'.$prices[$i].'.00$</p>';
                               $subtotal = $prices[$i] + $subtotal;
+=======
+                <div id="price" style="left: 200px; top:-82px;"><?php
+                $subtotal = 0;
+                    for($i = 1; $i <= 10; $i++){
+                        if(isset($prices[$i])){
+                            echo'<p? style="color:white;">'.$prices[$i].'.00$</p>';
+                        $subtotal = $prices[$i] + $subtotal;
+>>>>>>> Stashed changes
                         }
                     }
                     ?>
@@ -462,13 +476,13 @@ $prices = array();
                 </div>
                 <hr>
                 <div id="price2">
-                    <p class="price">200EGP</p>
-                    <p class="price">200EGP</p>
-                    <p class="price">200EGP</p>
-                    <p class="price">200EGP</p>
+                    <p class="price"><?php echo $subtotal.".00$" ?></p>
+                    <p class="price">200.00$</p>
+                    <p class="price">200.00$</p>
+                    <p class="price">0.00$</p>
                 </div>
                 <div id="subsec">
-                    <h4>Total: <h3>1200EGP</h3>
+                    <h4>Total: <h3>0.00$</h3>
                     </h4>
                 </div>
                 <form action="">
