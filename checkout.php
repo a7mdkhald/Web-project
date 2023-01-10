@@ -367,7 +367,7 @@ session_start();
                 </form>
             </div>
             <div id="pmd">
-                <form action="" id="paymd">
+                <form action="" id="paymd" method="post">   
                     <div id="crdt">
                         <input type="radio" onclick="enform()" id="paymc" class="crdt" name="paym" value="crdtcrd">
                         <label for="paymc" onclick="enform()" class="crdt">
@@ -390,7 +390,28 @@ session_start();
                     <input type="button" name="Next" id="nextc" value="Next" onclick="tocon()">
                 </form>
             </div>
+            <?php
+
+                $conn = new mysqli("localhost", "root", "", "storey");
+  if (!$conn) {
+    die("Couldn't connect to database: " . mysqli_connect_errno());
+  }
+            $date = date('d-m-y h:i:s');
+            if(isset($post['paymcrd'])){
+             $paymethod = $_POST['paymcrd'];
+            }
+            if (isset($post['paymcode'])) {
+            $paymethod = $_POST['paymcod'];
+
+            }
+            $paymethod = pay
+            $email = $_SESSION['email'];
+            $query_pay = "insert into `payment`(`P_Method`, `P_Total`,`P_Time`,`C_Email`) values('$paymethod','$total','$date','$email');"
+            
+
+            ?>  
             <div id="crdform">
+                <form action="" method="post">
                 <label for="cardname">Name On Card</label>
                 <input disabled type="text" name="cardname" id="cardname" placeholder="Name"><br><br>
                 <label for="cardno">Card Number</label>
@@ -400,7 +421,10 @@ session_start();
 
                 <label id="cvv" for="cvv">CVV</label>
                 <input disabled type="text" name="cvv" id="cvv" placeholder="000" size="3">
+                <button  type="submit" name="submit" id="submit" style="position:absolute; right:800px; top:100px;">submit</button>
+                </form>
             </div>
+
             <div id="confirmation">
                 <p><span class="head">Full Name:</span> fares kataya</p>
                 <br>
@@ -449,21 +473,12 @@ $prices = array();
                     ?>
                 </div>
                 
-<<<<<<< Updated upstream
-                <div id="price"><?php
-                $subtotal = 0;
-                    for($i = 1; $i <= 10; $i++){
-                        if(isset($prices[$i])){
-                             echo'<p style="color:white; left:200px; top:43px;" >'.$prices[$i].'.00$</p>';
-                              $subtotal = $prices[$i] + $subtotal;
-=======
                 <div id="price" style="left: 200px; top:-82px;"><?php
                 $subtotal = 0;
                     for($i = 1; $i <= 10; $i++){
                         if(isset($prices[$i])){
                             echo'<p? style="color:white;">'.$prices[$i].'.00$</p>';
                         $subtotal = $prices[$i] + $subtotal;
->>>>>>> Stashed changes
                         }
                     }
                     ?>
@@ -482,7 +497,12 @@ $prices = array();
                     <p class="price">0.00$</p>
                 </div>
                 <div id="subsec">
-                    <h4>Total: <h3>0.00$</h3>
+                    <h4>Total: <h3><?php
+                    $total = $subtotal + 400;
+                    echo $total . ".00"; 
+                   global $totstr; 
+                   $totstr = strval($total);
+                    ?></h3>
                     </h4>
                 </div>
                 <form action="">
@@ -580,6 +600,7 @@ $prices = array();
         </div>
 
     </footer>
+                
 </body>
 
 </html>

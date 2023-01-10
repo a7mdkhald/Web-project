@@ -20,13 +20,13 @@ function enform() {
     let expd =document.getElementById('expd');
     let cvv =document.getElementById('cvv');
     if (rad.checked) {
+        cvv.disabled = false;
         bt1.disabled = false;
         bt2.disabled = false;
         bt3.disabled = false;
         name.disabled = false;
         cardno.disabled = false;
         expd.disabled = false;
-        cvv.disabled = false;
 
     } else {
         
